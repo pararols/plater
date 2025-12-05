@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Informe Comitè d'Experts - Sant Jordi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Inter:wght@400;700&display=swap');
+
+        :root {
+            --primary: #0984e3;
+            --secondary: #2d3436;
+            --bg: #dfe6e9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            line-height: 1.6;
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #f1f2f6;
+            padding: 40px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                width: 100%;
+                background: white;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .report-header {
+            background: white;
+            padding: 40px;
+            border-top: 10px solid var(--primary);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .meta-info {
+            font-family: 'Roboto Mono', monospace;
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        .expert-block {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #b2bec3;
+        }
+
+        .expert-block.renewables {
+            border-color: #f1c40f;
+        }
+
+        .expert-block.legal {
+            border-color: #e74c3c;
+        }
+
+        .expert-block.ecology {
+            border-color: #2ecc71;
+        }
+
+        .expert-title {
+            font-family: 'Roboto Mono', monospace;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #636e72;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #2d3436;
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .consensus-box {
+            background: var(--secondary);
+            color: white;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .consensus-box h2 {
+            color: white;
+        }
+
+        .btn-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Roboto Mono', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn-print no-print" onclick="window.print()">🖨️ IMPRIMIR INFORME</button>
+
+    <div class="report-header">
+        <div class="meta-info">REF: EXP-SJ-2025-001 | DATA: 05/12/2025</div>
+        <h1>Informe del Comitè d'Experts</h1>
+        <p>Acta de la sessió de simulació estratègica per al Pla de Sobirania Energètica</p>
+    </div>
+
+    <div class="expert-block renewables">
+        <div class="expert-title">01. Enginyeria i Renovables</div>
+        <p><strong>Anàlisi:</strong> "Les dades són clares. Amb 313 kWp ja operatius (144 públics + 169 privats), Sant
+            Jordi demostra que no necessita macro-projectes. El teixit urbà i les naus agrícoles tenen capacitat
+            suficient per arribar als 2 MWp."</p>
+        <div class="quote">"La millor bateria és la gestió de la demanda. Hem de connectar aquests 313 kWp en una xarxa
+            intel·ligent."</div>
+    </div>
+
+    <div class="expert-block legal">
+        <div class="expert-title">02. Marc Jurídic</div>
+        <p><strong>Anàlisi:</strong> "El PLATER és una oportunitat, no una amenaça, si ens avancem. Si definim nosaltres
+            les 'zones no aptes' al POUM basant-nos en valors agropaisatgístics, tindrem la llei de la nostra part."</p>
+        <div class="quote">"La moratòria ens dona temps per escriure les regles del joc."</div>
+    </div>
+
+    <div class="expert-block ecology">
+        <div class="expert-title">03. Ecologia i Territori</div>
+        <p><strong>Anàlisi:</strong> "Els corredors biològics del Ter no es poden fragmentar amb tanques. L'energia ha
+            d'estar on hi ha el consum: al poble i als polígons, no al bosc."</p>
+    </div>
+
+    <div class="consensus-box">
+        <h2>Conclusions de Consens</h2>
+        <ol>
+            <li><strong>Prioritat Absoluta a l'Antropitzat:</strong> No es tocarà sòl natural fins que no s'hagin
+                exhaurit totes les cobertes.</li>
+            <li><strong>Model Híbrid:</strong> L'èxit depèn de sumar la força de l'Ajuntament (Pavelló) amb la dels
+                particulars (34 instal·lacions).</li>
+            <li><strong>Protecció Legal:</strong> Modificació immediata del POUM per blindar el sòl rústic.</li>
+        </ol>
+    </div>
+</body>
+
+</html>

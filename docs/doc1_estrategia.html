@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pla Estratègic Sant Jordi 2030</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;800&display=swap');
+
+        :root {
+            --primary: #2d5a27;
+            --text: #333;
+            --bg: #fff;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--text);
+            line-height: 1.8;
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 40px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        .cover-page {
+            height: 297mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            page-break-after: always;
+        }
+
+        .cover-img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-top: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .meta {
+            margin-top: auto;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @media print {
+            .content {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-box {
+            background: #e8f5e9;
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn-print no-print" onclick="window.print()">🖨️ Imprimir a PDF</button>
+
+    <div class="content">
+        <!-- Cover -->
+        <div class="cover-page">
+            <div class="logo">Ajuntament de Sant Jordi Desvalls</div>
+            <img src="../img/cover_strategy.png" alt="Sant Jordi Rural" class="cover-img">
+            <h1>Pla Estratègic 2030</h1>
+            <div class="subtitle">Sobirania Energètica i Protecció Rural</div>
+            <div class="meta">
+                <p>Document Aprovat Inicialment</p>
+                <p>Desembre 2025</p>
+            </div>
+        </div>
+
+        <!-- Index -->
+        <div class="page-break">
+            <h2>Índex de Continguts</h2>
+            <ul>
+                <li>1. Visió Executiva: "Ni un pam de terra perduda"</li>
+                <li>2. Diagnòstic Tècnic: On som realment?</li>
+                <li>3. Marc Normatiu: L'Escut Legal</li>
+                <li>4. Estratègia Tècnica: Els 3 Cercles</li>
+                <li>5. Model de Gestió: La Taxa Municipal</li>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <h2>1. Visió Executiva</h2>
+        <p>Aquest document estableix el full de ruta perquè Sant Jordi Desvalls esdevingui un referent en la transició
+            energètica descentralitzada. L'objectiu és clar: assolir l'autosuficiència elèctrica l'any 2030 sense
+            sacrificar el caràcter rural del municipi.</p>
+
+        <h2>2. Diagnòstic Tècnic</h2>
+        <p>El punt de partida és molt més favorable del que sembla. La combinació d'iniciativa pública i privada ja ha
+            posat el municipi en marxa.</p>
+
+        <table>
+            <tr>
+                <th>Indicador</th>
+                <th>Dades Actuals (2025)</th>
+                <th>Objectiu 2030</th>
+            </tr>
+            <tr>
+                <td>Consum Estimat</td>
+                <td>1.8 GWh/any</td>
+                <td>2.2 GWh/any</td>
+            </tr>
+            <tr>
+                <td>Potència Instal·lada</td>
+                <td>
+                    <strong>312,9 kWp (15%)</strong><br>
+                    - Públic: 144,2 kWp (Sala Nova + Pavelló)<br>
+                    - Privat: 168,7 kWp (34 instal·lacions)*
+                </td>
+                <td>2.0 MWp</td>
+            </tr>
+        </table>
+        <p><em>*Font dades privades: Registre d'Autoconsum de Catalunya (RAC), ICAEN (Juny 2024).</em></p>
+
+        <div class="highlight-box">
+            <strong>Conclusió:</strong> Sant Jordi Desvalls no comença de zero. Ja té el 15% de la feina feta sense
+            haver tocat ni un metre quadrat de camp.
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>3. Marc Normatiu: L'Escut Legal</h2>
+        <p>Per protegir el territori de l'especulació externa, s'activaran dos mecanismes:</p>
+        <h3>3.1. Modificació del POUM</h3>
+        <p>Es crearà la qualificació <strong>"Sòl de Valor Agropaisatgístic Estratègic"</strong>. En aquestes zones,
+            quedarà prohibida la instal·lació de parcs fotovoltaics a terra.</p>
+
+        <h2>4. Estratègia Tècnica: Els 3 Cercles</h2>
+        <ul>
+            <li><strong>Cercle 1 (Consolidació):</strong> Nucli Urbà. Posar a ple rendiment el model de "Taxa Municipal"
+                del Pavelló (70 kWp per a veïns).</li>
+            <li><strong>Cercle 2 (Corona Agrícola):</strong> Naus i magatzems. Programa "Teulada Neta" (retirada
+                d'uralita a canvi de coberta).</li>
+            <li><strong>Cercle 3 (Sòls Degradats):</strong> Antics abocadors o zones industrials per a petites plantes.
+            </li>
+        </ul>
+
+        <h2>5. Model de Gestió: La Taxa</h2>
+        <p>L'èxit de la Sala Nova i el Pavelló demostra que el model funciona. L'Ajuntament fa la inversió i els veïns
+            adquireixen "drets d'ús" (0.5 a 2 kWp) pagant una taxa municipal. Això simplifica la burocràcia i
+            democratitza l'accés.</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sant Jordi 2030 | Sobirania Rural</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="logo">Sant Jordi <span class="highlight">2030</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Inici</a></li>
+            <li><a href="#strategy">Estratègia</a></li>
+            <li><a href="#evidence">Dades</a></li>
+            <li><a href="#debate">Experts</a></li>
+            <li><a href="#docs">Documents</a></li>
+        </ul>
+        <button class="chat-btn" onclick="toggleChat()">
+            <i data-lucide="message-circle-question"></i> Assistent IA
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge">Pla Estratègic Municipal</span>
+            <h1>Ni un pam de terra perduda,<br>ni un watt de fora.</h1>
+            <p>Una proposta pionera per assolir l'autosuficiència energètica el 2030 preservant la nostra identitat
+                rural.</p>
+            <div class="hero-buttons">
+                <a href="#strategy" class="btn primary">Descobrir el Pla</a>
+                <a href="#docs" class="btn secondary">Veure Documents</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="circle-bg"></div>
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2832&auto=format&fit=crop"
+                alt="Paisatge Terraprims" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="section">
+        <div class="container">
+            <h2 class="section-title">La Visió: Sobirania de Precisió</h2>
+            <div class="grid-3">
+                <div class="card glass">
+                    <i data-lucide="sprout" class="icon"></i>
+                    <h3>Preservació Rural</h3>
+                    <p>Blindatge legal del sòl agrícola (POUM). Les plaques, a les teulades i espais degradats. El
+                        paisatge és innegociable.</p>
+                </div>
+                <div class="card glass">
+                    <i data-lucide="users" class="icon"></i>
+                    <h3>Model "Taxa"</h3>
+                    <p>Èxit demostrat: Sala Nova (17kWp) i Pavelló (127kWp). L'Ajuntament inverteix, el veí participa i
+                        estalvia.</p>
+                </div>
+                <div class="card glass">
+                    <i data-lucide="zap" class="icon"></i>
+                    <h3>15% Assolit</h3>
+                    <p>Amb <strong>313 kWp</strong> ja operatius (públic + privat), el camí cap al 2030 és real i
+                        tangible sense macro-parcs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Evidence Section (New) -->
+    <section id="evidence" class="section dark-bg">
+        <div class="container">
+            <div class="evidence-layout">
+                <div class="evidence-text">
+                    <span class="badge-small">Evidència Oficial</span>
+                    <h2>Les Dades no Enganyen</h2>
+                    <p>El Registre d'Autoconsum de Catalunya (ICAEN, Juny 2024) confirma la força de la iniciativa
+                        privada a Sant Jordi Desvalls.</p>
+                    <ul class="stats-list">
+                        <li><strong>34</strong> Instal·lacions Privades</li>
+                        <li><strong>168,7 kWp</strong> Potència Privada</li>
+                        <li><strong>144,2 kWp</strong> Potència Pública</li>
+                        <li><strong>312,9 kWp</strong> TOTAL OPERATIU</li>
+                    </ul>
+                    <a href="https://icaen.gencat.cat/ca/energia/autoconsum/Observatori-de-lautoconsum-a-catalunya/localitzacio-dinstallacions/"
+                        target="_blank" class="btn-link">
+                        <i data-lucide="external-link"></i> Font: Observatori ICAEN
+                    </a>
+                </div>
+                <div class="evidence-visual">
+                    <img src="img/icaen_rac_data.png" alt="Gràfic Dades ICAEN" class="feature-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experts Section -->
+    <section id="debate" class="section">
+        <div class="container">
+            <h2 class="section-title">El Consens dels Experts</h2>
+            <p class="section-subtitle">Simulació estratègica multidisciplinar</p>
+
+            <div class="debate-grid">
+                <div class="expert-card">
+                    <div class="expert-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Enginyer">
+                        <div>
+                            <h4>Enginyeria</h4>
+                            <span>Renovables</span>
+                        </div>
+                    </div>
+                    <div class="expert-quote">"Amb 313 kWp ja tenim la base. Ara cal coordinar les bateries i la demanda
+                        flexible."</div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ane" alt="Advocada">
+                        <div>
+                            <h4>Jurídic</h4>
+                            <span>Normativa</span>
+                        </div>
+                    </div>
+                    <div class="expert-quote">"El PLATER ens permet definir zones d'exclusió si demostrem que complim
+                        els objectius."</div>
+                </div>
+                <div class="expert-card">
+                    <div class="expert-header">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jordi" alt="Ecòleg">
+                        <div>
+                            <h4>Ecologia</h4>
+                            <span>Territori</span>
+                        </div>
+                    </div>
+                    <div class="expert-quote">"Els corredors biològics són sagrats. L'energia ha d'estar on hi ha la
+                        gent, no al bosc."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="docs" class="section gray-bg">
+        <div class="container">
+            <h2 class="section-title">Documentació Oficial</h2>
+            <div class="docs-grid">
+                <a href="docs/doc1_estrategia.html" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i data-lucide="file-text"></i></div>
+                    <div class="doc-info">
+                        <h4>Pla Estratègic 2030</h4>
+                        <span>Informe Complet · HTML</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="arrow"></i>
+                </a>
+                <a href="docs/doc2_accio.html" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i data-lucide="activity"></i></div>
+                    <div class="doc-info">
+                        <h4>Pla d'Acció Immediat</h4>
+                        <span>Els Primers 100 Dies · HTML</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="arrow"></i>
+                </a>
+                <a href="docs/doc3_experts.html" target="_blank" class="doc-card">
+                    <div class="doc-icon"><i data-lucide="users"></i></div>
+                    <div class="doc-info">
+                        <h4>Informe d'Experts</h4>
+                        <span>Acta del Debat · HTML</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="chat-widget hidden">
+        <div class="chat-header">
+            <h3>Assistent Sant Jordi</h3>
+            <button onclick="toggleChat()"><i data-lucide="x"></i></button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot">
+                Hola! Soc l'assistent del Pla. Pregunta'm sobre la "Taxa", les dades de l'ICAEN o la protecció del
+                paisatge.
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Escriu aquí..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()"><i data-lucide="send"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pla d'Acció Immediat - Sant Jordi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary: #d63031;
+            --secondary: #2d3436;
+            --bg: #fff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--secondary);
+            line-height: 1.6;
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #f5f6fa;
+            padding: 40px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .header {
+            background: var(--secondary);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .phase {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-left: 10px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .phase h2 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .task-list li::before {
+            content: "☐";
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .btn-print {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn-print no-print" onclick="window.print()">🖨️ IMPRIMIR PLA</button>
+
+    <div class="header">
+        <h1>Pla d'Acció Immediat</h1>
+        <p>Els Primers 100 Dies: De l'Estratègia a la Realitat</p>
+    </div>
+
+    <div class="phase">
+        <h2>MES 1: L'Escut i la Crida</h2>
+        <p><strong>Objectiu:</strong> Aturar l'especulació i mobilitzar la ciutadania.</p>
+        <ul class="task-list">
+            <li>Ple Municipal: Aprovació de la suspensió de llicències (Moratòria).</li>
+            <li>Inici expedient modificació POUM (Sòl Agropaisatgístic).</li>
+            <li>Campanya informativa "Sant Jordi Sobirà" (Bústia a bústia).</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h2>MES 2: Operació Pavelló</h2>
+        <p><strong>Objectiu:</strong> Assignar els 70 kWp públics disponibles.</p>
+        <ul class="task-list">
+            <li>Publicació bases participació Pavelló (0.5 - 2 kWp).</li>
+            <li>Jornades de portes obertes a la Sala Nova (Exemple d'èxit).</li>
+            <li>Priorització de famílies vulnerables i nucli antic.</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h2>MES 3: La Taula de l'Energia</h2>
+        <p><strong>Objectiu:</strong> Governar la transició junts.</p>
+        <ul class="task-list">
+            <li>Constitució Taula Local (Ajuntament + Veïns + Pagesia).</li>
+            <li>Inventari de naus agrícoles per al programa "Teulada Neta".</li>
+            <li>Presentació d'al·legacions al PLATER amb l'informe tècnic.</li>
+        </ul>
+    </div>
+</body>
+
+</html>
