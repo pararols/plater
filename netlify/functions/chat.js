@@ -1,24 +1,25 @@
-export default async (req, context) => {
+exports.handler = async function (event, context) {
     try {
         // Only allow POST requests
-        if (req.method !== "POST") {
-            return new Response("Method Not Allowed", { status: 405 });
+        if (event.httpMethod !== "POST") {
+            return { statusCode: 405, body: "Method Not Allowed" };
         }
 
-        const body = await req.json();
+        const body = JSON.parse(event.body);
         const userMessage = body.message;
 
         // Get the API Key from Environment Variables (Secure)
         const apiKey = process.env.GEMINI_API_KEY;
 
         if (!apiKey) {
-            return new Response(JSON.stringify({ error: "API Key not configured" }), {
-                status: 500,
-                headers: { "Content-Type": "application/json" },
-            });
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ error: "API Key not configured" })
+            };
         }
 
         // Call Google Gemini API
+        // Note: Node.js 18+ on Netlify has native fetch
         const response = await fetch(
             `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
             {
@@ -51,14 +52,17 @@ export default async (req, context) => {
             data.candidates?.[0]?.content?.parts?.[0]?.text ||
             "Ho sento, no he pogut connectar amb el cervell digital ara mateix.";
 
-        return new Response(JSON.stringify({ reply: botReply }), {
+        return {
+            statusCode: 200,
             headers: { "Content-Type": "application/json" },
-        });
+            body: JSON.stringify({ reply: botReply })
+        };
+
     } catch (error) {
         console.error("Error:", error);
-        return new Response(JSON.stringify({ error: "Internal Server Error" }), {
-            status: 500,
-            headers: { "Content-Type": "application/json" },
-        });
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: "Internal Server Error" })
+        };
     }
 };
