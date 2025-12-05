@@ -22,12 +22,14 @@ async function sendMessage() {
 
             if (data.reply) {
                 addMessage(data.reply, 'bot');
+            } else if (data.error) {
+                addMessage(`Error del servidor: ${data.error}`, 'bot');
             } else {
-                addMessage("Ho sento, hi ha hagut un error.", 'bot');
+                addMessage("Error desconegut: El servidor no ha retornat resposta.", 'bot');
             }
         } catch (error) {
             console.error('Error:', error);
-            addMessage("Error de connexió amb l'assistent.", 'bot');
+            addMessage(`Error de connexió: ${error.message}`, 'bot');
         }
     }
 }
