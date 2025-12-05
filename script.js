@@ -1,4 +1,16 @@
 
+// Chat Widget Logic
+function toggleChat() {
+    const widget = document.getElementById('chat-widget');
+    widget.classList.toggle('hidden');
+}
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+}
+
 async function sendMessage() {
     const input = document.getElementById('user-input');
     const message = input.value.trim();
