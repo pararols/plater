@@ -72,3 +72,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Lightbox Logic
+function openLightbox(imgSrc) {
+    // Create lightbox element if it doesn't exist
+    let lightbox = document.getElementById('lightbox');
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.id = 'lightbox';
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        `;
+        document.body.appendChild(lightbox);
+    }
+
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imgSrc;
+    lightbox.style.display = 'block';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.style.display = 'none';
+    }
+}
+
+// Close lightbox when clicking outside the image
+window.onclick = function (event) {
+    const lightbox = document.getElementById('lightbox');
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+}
