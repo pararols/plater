@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 exports.handler = async function (event, context) {
     try {
         // Only allow POST requests
@@ -15,14 +17,6 @@ exports.handler = async function (event, context) {
             return {
                 statusCode: 500,
                 body: JSON.stringify({ error: "API Key not configured" })
-            };
-        }
-
-        // Check if fetch is available
-        if (typeof fetch === 'undefined') {
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ error: "Global 'fetch' is not defined. Node version might be too old." })
             };
         }
 
