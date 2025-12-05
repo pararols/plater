@@ -1,5 +1,5 @@
 
-function sendMessage() {
+async function sendMessage() {
     const input = document.getElementById('user-input');
     const message = input.value.trim();
 
