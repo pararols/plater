@@ -1,5 +1,7 @@
+// ==========================================
+// 1. Chat Widget Logic
+// ==========================================
 
-// Chat Widget Logic
 function toggleChat() {
     const widget = document.getElementById('chat-widget');
     widget.classList.toggle('hidden');
@@ -63,7 +65,9 @@ function addMessage(text, sender) {
     body.scrollTop = body.scrollHeight;
 }
 
-// Smooth Scroll for Anchor Links
+// ==========================================
+// 2. Smooth Scroll for Anchor Links
+// ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -73,24 +77,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Lightbox Logic
+// ==========================================
+// 3. Lightbox Logic
+// ==========================================
 function openLightbox(imgSrc) {
-    // Create lightbox element if it doesn't exist
-    let lightbox = document.getElementById('lightbox');
-    if (!lightbox) {
-        lightbox = document.createElement('div');
-        lightbox.id = 'lightbox';
-        lightbox.className = 'lightbox';
-        lightbox.innerHTML = `
-            <span class="close-btn" onclick="closeLightbox()">&times;</span>
-            <img class="lightbox-content" id="lightbox-img">
-        `;
-        document.body.appendChild(lightbox);
-    }
-
+    const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    lightboxImg.src = imgSrc;
-    lightbox.style.display = 'block';
+
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = 'block';
+    }
 }
 
 function closeLightbox() {
@@ -107,3 +104,16 @@ window.onclick = function (event) {
         closeLightbox();
     }
 }
+
+// Initialize Lightbox on Zoomable Images
+document.addEventListener('DOMContentLoaded', () => {
+    // Add click event to any image with class 'zoomable'
+    // Note: Currently no images have this class in the new HTML, 
+    // but this preserves the functionality for future use or docs pages.
+    const zoomableImages = document.querySelectorAll('.feature-img.zoomable');
+    zoomableImages.forEach(img => {
+        img.addEventListener('click', () => {
+            openLightbox(img.src);
+        });
+    });
+});
