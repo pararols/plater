@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModificaciÃ³ Puntual del POUM | Sant Jordi Desvalls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background: var(--bg);
+        }
+
+        .doc-hero {
+            min-height: 50vh;
+            background: linear-gradient(135deg, #1a3c17 0%, #2d5a27 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .doc-hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .doc-hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .content-section {
+            padding: 4rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .legal-article {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        .article-header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .article-section {
+            margin-bottom: 2rem;
+        }
+
+        .article-section h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .article-section p {
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .legal-quote {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            border-radius: 5px;
+        }
+
+        .expert-opinion {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .expert-opinion h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--accent);
+        }
+
+        .warning-box h3 {
+            color: #e65100;
+            margin-bottom: 1rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid var(--primary);
+        }
+
+        .impact-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .impact-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: white;
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        .numbered-list {
+            counter-reset: item;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .numbered-list li {
+            counter-increment: item;
+            margin-bottom: 1.5rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .numbered-list li::before {
+            content: counter(item);
+            background: var(--primary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 800;
+        }
+
+        
+        @media (max-width: 768px) {
+            .doc-hero { min-height: 40vh; padding: 3rem 5%; }
+            .doc-hero h1 { font-size: 2rem; }
+            .doc-hero .subtitle { font-size: 1.1rem; }
+            .doc-hero p { font-size: 0.95rem; }
+            .content-section { padding: 2rem 5%; }
+            .legal-article { padding: 2rem; }
+            .article-header { font-size: 1rem; padding: 0.8rem 1rem; }
+            .article-section h4 { font-size: 1rem; }
+            .numbered-list li { padding-left: 2.5rem; font-size: 0.95rem; }
+            .numbered-list li::before { width: 30px; height: 30px; font-size: 0.9rem; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .back-btn { position: static; margin: 1rem; width: calc(100% - 2rem); justify-content: center; }
+            .expert-opinion, .warning-box { padding: 1.5rem; }
+        }
+
+        @media print {
+            .back-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html" class="back-btn">
+        <i data-lucide="arrow-left"></i> Tornar
+    </a>
+
+    <!-- Hero Section -->
+    <section class="doc-hero">
+        <div class="doc-hero-content">
+            <span class="badge">Document TÃ¨cnic-JurÃ­dic</span>
+            <h1>ModificaciÃ³ Puntual del POUM</h1>
+            <p class="subtitle">ClÃ usula de Tecnologia TransitÃ²ria</p>
+            <p>Proposta de regulaciÃ³ temporal i reversible per a instalÂ·lacions renovables en sÃ²l no urbanitzable</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <!-- Dictamen TÃ¨cnic -->
+        <div class="expert-opinion">
+            <h3><i data-lucide="shield-check"></i> Dictamen de Viabilitat</h3>
+            <p><strong>Veredicte General:</strong> La proposta Ã©s <strong>VIABLE</strong>, perÃ² <strong>EXTREMADAMENT
+                    AGOSARADA</strong>.</p>
+            <p>No es pot redactar com un "desig de futur" (la llei no entÃ©n de ciÃ¨ncia-ficciÃ³), sinÃ³ que s'ha de
+                fonamentar en conceptes jurÃ­dics existents: <strong>la temporalitat de l'Ãºs excepcional en sÃ²l
+                    rÃºstic</strong> i la <strong>garantia de restituciÃ³</strong>.</p>
+        </div>
+
+        <!-- Fonament Legal -->
+        <div class="legal-article">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-dark);">ðŸ“‹ Fonament Legal</h2>
+
+            <div class="article-section">
+                <h4>1. L'Eina Legal: "Usos Provisionals" i "LlicÃ¨ncia Temporal"</h4>
+                <p>En Dret UrbanÃ­stic (Llei d'Urbanisme de Catalunya), el SÃ²l No Urbanitzable (SNU) tÃ© com a destinaciÃ³
+                    natural l'agrÃ­cola/forestal. L'Ãºs industrial (fotovoltaica) Ã©s una <strong>excepciÃ³</strong>.</p>
+
+                <ul class="numbered-list">
+                    <li>
+                        <strong>L'Argument:</strong> Com que Ã©s una excepciÃ³, l'Ajuntament pot lligar la llicÃ¨ncia a la
+                        <strong>vida Ãºtil de la tecnologia instalÂ·lada</strong>.
+                    </li>
+                    <li>
+                        <strong>La Trampa:</strong> Normalment, les llicÃ¨ncies no caduquen mentre hi hagi activitat.
+                    </li>
+                    <li>
+                        <strong>La SoluciÃ³ (El "Hack" JurÃ­dic):</strong> No prohibim que segueixin funcionant, sinÃ³ que
+                        <strong>prohibim la renovaciÃ³ automÃ tica o el "repowering"</strong> (canviar plaques velles per
+                        noves) sense una nova llicÃ¨ncia completa.
+                    </li>
+                </ul>
+
+                <div class="legal-quote">
+                    <strong>RedacciÃ³ proposada:</strong><br>
+                    "La llicÃ¨ncia d'Ãºs i obres s'atorga exclusivament per a la vida Ãºtil dels equips instalÂ·lats
+                    inicialment, estimada en un mÃ xim de 25 anys. Qualsevol substituciÃ³ d'elements de generaciÃ³
+                    requerirÃ  una nova tramitaciÃ³ subjecta a la normativa i tecnologies disponibles en aquell moment
+                    futur."
+                </div>
+            </div>
+
+            <div class="article-section">
+                <h4>2. La FianÃ§a de Desmantellament (El Cop EconÃ²mic)</h4>
+                <p>El Decret Llei 16/2019 de la Generalitat ja obliga a presentar un pla de restauraciÃ³ i una fianÃ§a.
+                    PerÃ² molts ajuntaments accepten fiances baixes.</p>
+
+                <p><strong>L'EstratÃ¨gia de Sant Jordi:</strong></p>
+                <ul>
+                    <li>Exigir que la fianÃ§a inclogui no nomÃ©s el desmuntatge, sinÃ³ el <strong>tractament de
+                            residus</strong> (reciclatge de panells, que Ã©s carÃ­ssim) i la
+                        <strong>reforestaciÃ³/recuperaciÃ³ agronÃ²mica</strong> del sÃ²l durant 5 anys posteriors.</li>
+                    <li><strong>ActualitzaciÃ³ de l'IPC:</strong> La fianÃ§a s'ha de recalcular cada 5 anys. AixÃ²
+                        destrossa el "Business Plan" dels fons d'inversiÃ³, perquÃ¨ els obliga a tenir molts diners
+                        immobilitzats.</li>
+                </ul>
+            </div>
+
+            <div class="article-section">
+                <h4>3. La Premissa del 2050 (JustificaciÃ³ TÃ¨cnica)</h4>
+                <p>No podem posar "fusiÃ³ nuclear" en una norma local perquÃ¨ un jutge diria que Ã©s especulatiu. PerÃ² sÃ­
+                    que podem utilitzar el <strong>"Principi de PrecauciÃ³"</strong> i el <strong>PAESC</strong>.</p>
+
+                <div class="legal-quote">
+                    <strong>ArgumentaciÃ³:</strong><br>
+                    "Atesa la rÃ pida evoluciÃ³ tecnolÃ²gica i els objectius de descarbonitzaciÃ³ del transport pel 2050, es
+                    considera que l'ocupaciÃ³ extensiva de sÃ²l agrÃ­cola Ã©s una <strong>mesura transitÃ²ria
+                        d'emergÃ¨ncia</strong> i no una transformaciÃ³ urbanÃ­stica permanent."
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Normatiu -->
+        <div class="legal-article">
+            <div class="article-header">
+                ARTICLE X: RÃˆGIM TRANSITORI DE LES INSTALÂ·LACIONS DE GENERACIÃ“ EN SÃ’L NO URBANITZABLE
+            </div>
+
+            <div class="article-section">
+                <h4>1. CarÃ cter Provisional i Reversible</h4>
+                <p>Totes les instalÂ·lacions de generaciÃ³ d'energia renovable en SÃ²l No Urbanitzable s'entenen com a usos
+                    excepcionals i transitoris lligats a l'emergÃ¨ncia climÃ tica actual. No generen drets urbanÃ­stics
+                    consolidats de carÃ cter indefinit sobre el terreny.</p>
+            </div>
+
+            <div class="article-section">
+                <h4>2. Temporalitat de la LlicÃ¨ncia</h4>
+                <p>Les llicÃ¨ncies municipals s'atorgaran per un perÃ­ode mÃ xim improrrogable de <strong>25 anys</strong>
+                    (coincident amb la vida Ãºtil estÃ ndard i garantia tecnolÃ²gica dels panells).</p>
+            </div>
+
+            <div class="article-section">
+                <h4>3. ProhibiciÃ³ de RepotenciaciÃ³ (Repowering) AutomÃ tica</h4>
+                <p>Finalitzat aquest termini, o quan el rendiment de la instalÂ·laciÃ³ baixi del 70%, la llicÃ¨ncia
+                    s'extingirÃ . La instalÂ·laciÃ³ de nova tecnologia sobre el mateix terreny requerirÃ  una nova llicÃ¨ncia
+                    sotmesa a la normativa vigent en aquell moment, havent de justificar novament la seva necessitat i
+                    la inexistÃ¨ncia d'alternatives tecnolÃ²giques de menor impacte territorial (ex. fusiÃ³, hidrogen,
+                    generaciÃ³ urbana).</p>
+            </div>
+
+            <div class="article-section">
+                <h4>4. Garantia de RestituciÃ³ Total</h4>
+                <p>Previ a l'inici d'obres, el promotor dipositarÃ  una fianÃ§a bancÃ ria suficient per cobrir el 100% del
+                    cost de desmantellament, gestiÃ³ de residus especials i un pla de seguiment de la recuperaciÃ³ de la
+                    capa vegetal fÃ¨rtil durant 3 anys posteriors al tancament.</p>
+            </div>
+        </div>
+
+        <!-- Impacte Financer -->
+        <div class="warning-box">
+            <h3>ðŸ’° Per quÃ¨ aixÃ² espanta els especuladors?</h3>
+            <p><strong>AnÃ lisi Financera:</strong></p>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h4>Valor Residual Zero</h4>
+                    <p>Els fons d'inversiÃ³ calculen el valor dels seus actius a 30-40 anys. Si l'any 25 la llicÃ¨ncia mor
+                        i han de tornar a demanar permÃ­s (amb risc de denegaciÃ³), el valor residual del projecte Ã©s 0 â‚¬.
+                        AixÃ² fa que el projecte sigui "no finanÃ§able".</p>
+                </div>
+
+                <div class="impact-card">
+                    <h4>Cost d'Oportunitat</h4>
+                    <p>Si el 2045 la tecnologia d'hidrogen Ã©s mÃ©s barata i compacta, l'Ajuntament podrÃ  denegar la nova
+                        llicÃ¨ncia solar dient: "Ja no cal ocupar 50 hectÃ rees, ara amb una planta d'hidrogen de 1.000mÂ²
+                        en tenim prou".</p>
+                </div>
+
+                <div class="impact-card">
+                    <h4>FianÃ§a Actualitzable</h4>
+                    <p>L'obligaciÃ³ de recalcular la fianÃ§a cada 5 anys segons l'IPC i els costos reals de reciclatge
+                        obliga a immobilitzar capital que els inversors prefereixen destinar a altres projectes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ConclusiÃ³ -->
+        <div class="expert-opinion">
+            <h3><i data-lucide="lightbulb"></i> ConclusiÃ³ EstratÃ¨gica</h3>
+            <p>La clÃ usula Ã©s <strong>genial</strong>. Ã‰s un mecanisme de defensa "passiu-agressiu".</p>
+            <p><strong>No dius "NO". Dius "SÃ, PERÃ’ NOMÃ‰S MENTRE SIGUI IMPRESCINDIBLE".</strong></p>
+            <p>AixÃ² posa la cÃ rrega de la prova en el futur: si el 2050 encara necessitem plaques solars massives, es
+                podran tornar a demanar. PerÃ² si la tecnologia ha millorat (com preveiem), Sant Jordi recuperarÃ  els
+                seus camps sense cost.</p>
+        </div>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="../index.html" class="btn primary">
+                <i data-lucide="home"></i> Tornar a la PÃ gina Principal
+            </a>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
