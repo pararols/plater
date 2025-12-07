@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ca">
 
 <head>
@@ -279,11 +279,10 @@
     <!-- Hero Section -->
     <section class="feedback-hero">
         <div>
-            <span class="badge">Participacié©ÆéÂ³ Ciutadana</span>
+            <span class="badge">Participació Ciutadana</span>
             <h1>Digue-hi la teva</h1>
-            <p>Comparteix les teves propostes, idees i comentaris sobre el projecte energé©ÆéÂ¨tic de Sant Jordi. La teva
-                veu
-                é©ÆéÂ©s important!</p>
+            <p>Comparteix les teves propostes, idees i comentaris sobre el projecte energètic de Sant Jordi. La teva veu
+                és important!</p>
         </div>
     </section>
 
@@ -293,53 +292,67 @@
             <!-- Form Column -->
             <div>
                 <div class="info-box">
-                    <h3>é©Â°éÂ¸é¢â¬ÅéÂ Com funciona?</h3>
-                    <p>Les teves aportacions seran revisades abans de publicar-se per assegurar un debat respectué©ÆéÂ³s i
-                        constructiu. Rebré©ÆéÂ s una confirmacié©ÆéÂ³ per email.</p>
+                    <h3>📝 Com funciona?</h3>
+                    <p>Les teves aportacions seran revisades abans de publicar-se per assegurar un debat respectuós i
+                        constructiu. Rebràs una confirmació per email.</p>
                 </div>
 
                 <div class="form-container">
-                    <div class="form-group">
-                        <label for="name">Nom (opcional)</label>
-                        <input type="text" id="name" name="name" placeholder="Ané©ÆéÂ²nim">
-                        <small>Pots deixar-ho en blanc si prefereixes ser ané©ÆéÂ²nim</small>
+                    <h2>Envia la teva aportació</h2>
+                    <div id="success-message" class="success-message">
+                        ✓ Gràcies! La teva aportació s'ha enviat correctament i serà revisada aviat.
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="el-teu-email@exemple.cat">
-                        <small>No es publicaré©ÆéÂ , nomé©ÆéÂ©s per contactar-te si cal</small>
-                    </div>
+                    <form name="feedback" method="POST" action="/digue_hi.html#success" data-netlify="true"
+                        data-netlify-honeypot="bot-field">
+                        <!-- Honeypot field for bot protection -->
+                        <p style="display: none;">
+                            <label>No omplir si ets humà: <input name="bot-field" /></label>
+                        </p>
+                        <input type="hidden" name="form-name" value="feedback" />
 
-                    <div class="form-group">
-                        <label for="type">Tipus d'aportacié©ÆéÂ³ *</label>
-                        <select id="type" name="type" required>
-                            <option value="">Selecciona una opcié©ÆéÂ³</option>
-                            <option value="Proposta">é©Â°éÂ¸é¢â¬â¢éÂ¡ Proposta</option>
-                            <option value="Idea">é©Â°éÂ¸éâéÂ¸ Idea</option>
-                            <option value="Pregunta">é©Â¢éÂé¢â¬Å Pregunta</option>
-                            <option value="Comentari">é©Â°éÂ¸é¢â¬â¢éÂ¬ Comentari</option>
-                            <option value="Preocupacié©ÆéÂ³">é©Â¢éÂ¡éÂ é©Â¯éÂ¸éÂ Preocupacié©ÆéÂ³</option>
-                        </select>
-                    </div>
+                        <div class="form-group">
+                            <label for="name">Nom (opcional)</label>
+                            <input type="text" id="name" name="name" placeholder="Anònim">
+                            <small>Pots deixar-ho en blanc si prefereixes ser anònim</small>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="title">Té©ÆéÂ­tol *</label>
-                        <input type="text" id="title" name="title" required
-                            placeholder="Resum breu de la teva aportacié©ÆéÂ³" maxlength="100">
-                    </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="el-teu-email@exemple.cat">
+                            <small>No es publicarà, només per contactar-te si cal</small>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">Missatge *</label>
-                        <textarea id="message" name="message" required
-                            placeholder="Explica'ns la teva proposta, idea o comentari..." maxlength="1000"></textarea>
-                        <small id="char-count">0 / 1000 caré©ÆéÂ cters</small>
-                    </div>
+                        <div class="form-group">
+                            <label for="type">Tipus d'aportació *</label>
+                            <select id="type" name="type" required>
+                                <option value="">Selecciona una opció</option>
+                                <option value="Proposta">💡 Proposta</option>
+                                <option value="Idea">🌟 Idea</option>
+                                <option value="Pregunta">❓ Pregunta</option>
+                                <option value="Comentari">💬 Comentari</option>
+                                <option value="Preocupació">⚠️ Preocupació</option>
+                            </select>
+                        </div>
 
-                    <button type="submit" class="submit-btn">
-                        <i data-lucide="send"></i>
-                        Enviar aportacié©ÆéÂ³
-                    </button>
+                        <div class="form-group">
+                            <label for="title">Títol *</label>
+                            <input type="text" id="title" name="title" required
+                                placeholder="Resum breu de la teva aportació" maxlength="100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Missatge *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Explica'ns la teva proposta, idea o comentari..."
+                                maxlength="1000"></textarea>
+                            <small id="char-count">0 / 1000 caràcters</small>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i data-lucide="send"></i>
+                            Enviar aportació
+                        </button>
                     </form>
                 </div>
             </div>
@@ -347,48 +360,74 @@
             <!-- Submissions Column -->
             <div class="submissions-container">
                 <h2>Aportacions recents</h2>
-                <p style="color: #666; margin-bottom: 2rem;">Les aportacions apareixeran aqué©ÆéÂ­ un cop aprovades</p>
+                <p style="color: #666; margin-bottom: 2rem;">Les aportacions apareixeran aquí un cop aprovades</p>
 
-                <!-- Example submissions (these will be replaced with real data) -->
+                <!-- Example submissions -->
                 <div class="submission-card">
                     <div class="submission-header">
-                        <span class="submission-type">é©Â°éÂ¸é¢â¬â¢éÂ¡ Proposta</span>
+                        <span class="submission-type">💡 Proposta</span>
                         <span class="submission-date">5 desembre 2024</span>
                     </div>
                     <div class="submission-title">Plaques solars a la teulada de l'escola</div>
                     <div class="submission-content">
-                        Proposo instalé©â·lar plaques solars a la teulada de l'escola per donar exemple als nens i reduir
-                        la factura elé©ÆéÂ¨ctrica del centre.
+                        Proposo instal·lar plaques solars a la teulada de l'escola per donar exemple als nens i reduir
+                        la factura elèctrica del centre.
                     </div>
-                    <div class="submission-author">é©Â¢é¢âÂ¬é¢â¬Â Maria G.</div>
+                    <div class="submission-author">— Maria G.</div>
                 </div>
 
                 <div class="submission-card">
                     <div class="submission-header">
-                        <span class="submission-type">é©Â°éÂ¸éâéÂ¸ Idea</span>
+                        <span class="submission-type">🌟 Idea</span>
                         <span class="submission-date">3 desembre 2024</span>
                     </div>
-                    <div class="submission-title">Taller d'autoconsum per a veé©ÆéÂ¯ns</div>
+                    <div class="submission-title">Taller d'autoconsum per a veïns</div>
                     <div class="submission-content">
-                        Seria é©ÆéÂºtil organitzar un taller on expliquin com funciona l'autoconsum i quines ajudes hi ha
+                        Seria útil organitzar un taller on expliquin com funciona l'autoconsum i quines ajudes hi ha
                         disponibles.
                     </div>
-                    <div class="submission-author">é©Â¢é¢âÂ¬é¢â¬Â Joan P.</div>
+                    <div class="submission-author">— Joan P.</div>
                 </div>
 
                 <div class="submission-card">
                     <div class="submission-header">
-                        successMessage.classList.add('show');
-                        form.reset();
-                        charCount.textContent = '0 / 1000 caré©ÆéÂ cters';
+                        <span class="submission-type">❓ Pregunta</span>
+                        <span class="submission-date">1 desembre 2024</span>
+                    </div>
+                    <div class="submission-title">Com afecta això a la meva factura?</div>
+                    <div class="submission-content">
+                        M'agradaria saber com la comunitat energètica pot ajudar a reduir la meva factura de la llum.
+                    </div>
+                    <div class="submission-author">— Anònim</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        // Hide message after 5 seconds
-                        setTimeout(() => {
-                        successMessage.classList.remove('show');
-                        }, 5000);
-                        }, 100);
-                        });
-                        </script>
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Check if form was successfully submitted (using hash)
+        const successMessage = document.getElementById('success-message');
+        
+        if (window.location.hash === '#success') {
+            successMessage.classList.add('show');
+            history.replaceState(null, null, ' ');
+            setTimeout(() => { successMessage.classList.remove('show'); }, 10000);
+        }
+
+        // Character counter
+        const messageField = document.getElementById('message');
+        const charCount = document.getElementById('char-count');
+
+        if (messageField && charCount) {
+            messageField.addEventListener('input', function () {
+                const count = this.value.length;
+                charCount.textContent = `${count} / 1000 caràcters`;
+            });
+        }
+    </script>
 </body>
 
 </html>
