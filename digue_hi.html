@@ -299,61 +299,47 @@
                 </div>
 
                 <div class="form-container">
-                    <h2>Envia la teva aportaciéƒÂ³</h2>
-                    <div id="success-message" class="success-message">
-                        é¢Å“â€œ GréƒÂ cies! La teva aportaciéƒÂ³ s'ha enviat correctament i seréƒÂ  revisada aviat.
+                    <div class="form-group">
+                        <label for="name">Nom (opcional)</label>
+                        <input type="text" id="name" name="name" placeholder="AnéƒÂ²nim">
+                        <small>Pots deixar-ho en blanc si prefereixes ser anéƒÂ²nim</small>
                     </div>
 
-                    <form name="feedback" method="POST" action="/digue_hi.html?success=true" data-netlify="true"
-                        data-netlify-honeypot="bot-field">
-                        <!-- Honeypot field for bot protection -->
-                        <p style="display: none;">
-                            <label>No omplir si ets huméƒÂ : <input name="bot-field" /></label>
-                        </p>
-                        <input type="hidden" name="form-name" value="feedback" />
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="el-teu-email@exemple.cat">
+                        <small>No es publicaréƒÂ , noméƒÂ©s per contactar-te si cal</small>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="name">Nom (opcional)</label>
-                            <input type="text" id="name" name="name" placeholder="AnéƒÂ²nim">
-                            <small>Pots deixar-ho en blanc si prefereixes ser anéƒÂ²nim</small>
-                        </div>
+                    <div class="form-group">
+                        <label for="type">Tipus d'aportaciéƒÂ³ *</label>
+                        <select id="type" name="type" required>
+                            <option value="">Selecciona una opciéƒÂ³</option>
+                            <option value="Proposta">é°Å¸â€™Â¡ Proposta</option>
+                            <option value="Idea">é°Å¸Å’Å¸ Idea</option>
+                            <option value="Pregunta">é¢Ââ€œ Pregunta</option>
+                            <option value="Comentari">é°Å¸â€™Â¬ Comentari</option>
+                            <option value="PreocupaciéƒÂ³">é¢Å¡Â é¯Â¸Â PreocupaciéƒÂ³</option>
+                        </select>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="el-teu-email@exemple.cat">
-                            <small>No es publicaréƒÂ , noméƒÂ©s per contactar-te si cal</small>
-                        </div>
+                    <div class="form-group">
+                        <label for="title">TéƒÂ­tol *</label>
+                        <input type="text" id="title" name="title" required
+                            placeholder="Resum breu de la teva aportaciéƒÂ³" maxlength="100">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="type">Tipus d'aportaciéƒÂ³ *</label>
-                            <select id="type" name="type" required>
-                                <option value="">Selecciona una opciéƒÂ³</option>
-                                <option value="Proposta">é°Å¸â€™Â¡ Proposta</option>
-                                <option value="Idea">é°Å¸Å’Å¸ Idea</option>
-                                <option value="Pregunta">é¢Ââ€œ Pregunta</option>
-                                <option value="Comentari">é°Å¸â€™Â¬ Comentari</option>
-                                <option value="PreocupaciéƒÂ³">é¢Å¡Â é¯Â¸Â PreocupaciéƒÂ³</option>
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <label for="message">Missatge *</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Explica'ns la teva proposta, idea o comentari..." maxlength="1000"></textarea>
+                        <small id="char-count">0 / 1000 caréƒÂ cters</small>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="title">TéƒÂ­tol *</label>
-                            <input type="text" id="title" name="title" required
-                                placeholder="Resum breu de la teva aportaciéƒÂ³" maxlength="100">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Missatge *</label>
-                            <textarea id="message" name="message" required
-                                placeholder="Explica'ns la teva proposta, idea o comentari..."
-                                maxlength="1000"></textarea>
-                            <small id="char-count">0 / 1000 caréƒÂ cters</small>
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            <i data-lucide="send"></i>
-                            Enviar aportaciéƒÂ³
-                        </button>
+                    <button type="submit" class="submit-btn">
+                        <i data-lucide="send"></i>
+                        Enviar aportaciéƒÂ³
+                    </button>
                     </form>
                 </div>
             </div>
@@ -392,50 +378,17 @@
 
                 <div class="submission-card">
                     <div class="submission-header">
-                        <span class="submission-type">é¢Ââ€œ Pregunta</span>
-                        <span class="submission-date">1 desembre 2024</span>
-                    </div>
-                    <div class="submission-title">Com afecta aixéƒÂ² a la meva factura?</div>
-                    <div class="submission-content">
-                        M'agradaria saber com la comunitat energéƒÂ¨tica pot ajudar a reduir la meva factura de la llum.
-                    </div>
-                    <div class="submission-author">é¢â‚¬â€ AnéƒÂ²nim</div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        successMessage.classList.add('show');
+                        form.reset();
+                        charCount.textContent = '0 / 1000 caréƒÂ cters';
 
-    <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-
-        // Character counter
-        const messageField = document.getElementById('message');
-        const charCount = document.getElementById('char-count');
-
-        messageField.addEventListener('input', function () {
-            const count = this.value.length;
-            charCount.textContent = `${count} / 1000 caréƒÂ cters`;
-        });
-
-        // Form submission handler
-        const form = document.querySelector('form[name="feedback"]');
-        const successMessage = document.getElementById('success-message');
-
-        form.addEventListener('submit', function (e) {
-            // Netlify handles the submission, but we show a success message
-            setTimeout(() => {
-                successMessage.classList.add('show');
-                form.reset();
-                charCount.textContent = '0 / 1000 caréƒÂ cters';
-
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    successMessage.classList.remove('show');
-                }, 5000);
-            }, 100);
-        });
-    </script>
+                        // Hide message after 5 seconds
+                        setTimeout(() => {
+                        successMessage.classList.remove('show');
+                        }, 5000);
+                        }, 100);
+                        });
+                        </script>
 </body>
 
 </html>
