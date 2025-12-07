@@ -2,484 +2,483 @@
 <html lang="ca">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Protocol Sant Jordi | Sobirania Rural de PrecisiÃ³</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
-rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-<script src="https://unpkg.com/lucide@latest"></script>
-<style>
-body {
-background: var(--bg);
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Sant Jordi | Sobirania Rural de Precisió</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background: var(--bg);
+        }
 
-.doc-hero {
-min-height: 60vh;
-background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 6rem 5%;
-position: relative;
-overflow: hidden;
-}
+        .doc-hero {
+            min-height: 60vh;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
 
-.doc-hero::before {
-content: '';
-position: absolute;
-width: 500px;
-height: 500px;
-background: rgba(255, 255, 255, 0.05);
-border-radius: 50%;
-top: -200px;
-right: -200px;
-}
+        .doc-hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+        }
 
-.doc-hero-content {
-max-width: 800px;
-z-index: 2;
-}
+        .doc-hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
 
-.doc-hero h1 {
-font-size: 3.5rem;
-color: white;
-margin-bottom: 1rem;
-}
+        .doc-hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
 
-.doc-hero .subtitle {
-font-size: 1.5rem;
-color: var(--accent);
-margin-bottom: 2rem;
-}
+        .doc-hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
 
-.doc-hero p {
-font-size: 1.1rem;
-opacity: 0.9;
-line-height: 1.8;
-}
+        .doc-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
 
-.content-section {
-padding: 4rem 5%;
-max-width: 1200px;
-margin: 0 auto;
-}
+        .content-section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.axis-card {
-background: white;
-padding: 3rem;
-border-radius: 20px;
-box-shadow: var(--shadow);
-margin-bottom: 3rem;
-border-left: 5px solid var(--primary);
-}
+        .axis-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--primary);
+        }
 
-.axis-header {
-display: flex;
-align-items: center;
-gap: 1.5rem;
-margin-bottom: 2rem;
-}
+        .axis-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
 
-.axis-number {
-background: var(--primary);
-color: white;
-width: 60px;
-height: 60px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 1.8rem;
-font-weight: 800;
-flex-shrink: 0;
-}
+        .axis-number {
+            background: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
 
-.axis-title {
-font-size: 2rem;
-color: var(--primary-dark);
-margin: 0;
-}
+        .axis-title {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin: 0;
+        }
 
-.action-item {
-background: #f8f9fa;
-padding: 1.5rem;
-border-radius: 10px;
-margin-bottom: 1.5rem;
-border-left: 3px solid var(--accent);
-}
+        .action-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--accent);
+        }
 
-.action-item h4 {
-color: var(--primary);
-margin-bottom: 0.5rem;
-font-size: 1.2rem;
-}
+        .action-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
 
-.action-item ul {
-margin-left: 1.5rem;
-color: #555;
-}
+        .action-item ul {
+            margin-left: 1.5rem;
+            color: #555;
+        }
 
-.action-item ul li {
-margin-bottom: 0.5rem;
-}
+        .action-item ul li {
+            margin-bottom: 0.5rem;
+        }
 
-.highlight-box {
-background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-padding: 2rem;
-border-radius: 15px;
-margin: 2rem 0;
-border-left: 5px solid var(--primary);
-}
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--primary);
+        }
 
-.highlight-box h3 {
-color: var(--primary-dark);
-margin-bottom: 1rem;
-}
+        .highlight-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
 
-.roadmap-table {
-width: 100%;
-border-collapse: collapse;
-margin: 2rem 0;
-background: white;
-border-radius: 10px;
-overflow: hidden;
-box-shadow: var(--shadow);
-}
+        .roadmap-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
 
-.roadmap-table th {
-background: var(--primary);
-color: white;
-padding: 1.2rem;
-text-align: left;
-font-weight: 600;
-}
+        .roadmap-table th {
+            background: var(--primary);
+            color: white;
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+        }
 
-.roadmap-table td {
-padding: 1.2rem;
-border-bottom: 1px solid #eee;
-}
+        .roadmap-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid #eee;
+        }
 
-.roadmap-table tr:last-child td {
-border-bottom: none;
-}
+        .roadmap-table tr:last-child td {
+            border-bottom: none;
+        }
 
-.roadmap-table tr:hover {
-background: #f8f9fa;
-}
+        .roadmap-table tr:hover {
+            background: #f8f9fa;
+        }
 
-.formula {
-background: #f8f9fa;
-padding: 1.5rem;
-border-radius: 10px;
-font-family: 'Courier New', monospace;
-font-size: 1.1rem;
-text-align: center;
-margin: 1.5rem 0;
-border: 2px dashed var(--primary);
-}
+        .formula {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            border: 2px dashed var(--primary);
+        }
 
-.back-btn {
-position: fixed;
-top: 2rem;
-left: 2rem;
-background: white;
-color: var(--primary);
-padding: 0.8rem 1.5rem;
-border-radius: 50px;
-box-shadow: var(--shadow);
-display: flex;
-align-items: center;
-gap: 0.5rem;
-font-weight: 600;
-transition: all 0.3s;
-z-index: 1000;
-}
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: white;
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
 
-.back-btn:hover {
-transform: translateX(-5px);
-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
+        .back-btn:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
 
-.key-concept {
-background: var(--accent);
-color: white;
-padding: 0.3rem 0.8rem;
-border-radius: 5px;
-font-weight: 600;
-display: inline-block;
-margin: 0.2rem;
-}
+        .key-concept {
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.2rem;
+        }
 
-@media print {
-.back-btn {
-display: none;
-}
-}
-</style>
+        @media print {
+            .back-btn {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<a href="../index.html" class="back-btn">
-<i data-lucide="arrow-left"></i> Tornar
-</a>
+    <a href="../index.html" class="back-btn">
+        <i data-lucide="arrow-left"></i> Tornar
+    </a>
 
-<!-- Hero Section -->
-<section class="doc-hero">
-<div class="doc-hero-content">
-<span class="badge">Document EstratÃ¨gic</span>
-<h1>Protocol Sant Jordi</h1>
-<p class="subtitle">Sobirania Rural de PrecisiÃ³</p>
-<p>Una estratÃ¨gia integral, dissenyada per ser <strong>robusta jurÃ­dicament, viable tÃ¨cnicament i
-cohesionadora socialment</strong>. No es tracta de dir "NO" a les renovables, sinÃ³ de dir
-<strong>"AixÃ­ SÃ, i nomÃ©s AixÃ­"</strong>, recuperant el control del territori.</p>
-</div>
-</section>
+    <!-- Hero Section -->
+    <section class="doc-hero">
+        <div class="doc-hero-content">
+            <span class="badge">Document Estratègic</span>
+            <h1>Protocol Sant Jordi</h1>
+            <p class="subtitle">Sobirania Rural de Precisió</p>
+            <p>Una estratègia integral, dissenyada per ser <strong>robusta jurídicament, viable tècnicament i
+                    cohesionadora socialment</strong>. No es tracta de dir "NO" a les renovables, sinó de dir
+                <strong>"Així SÍ, i només Així"</strong>, recuperant el control del territori.</p>
+        </div>
+    </section>
 
-<!-- Main Content -->
-<section class="content-section">
-<!-- Introduction -->
-<div class="highlight-box">
-<h3>ðŸ’¡ Concepte Clau: Dimensionament Ajustat</h3>
-<p>Produir exactament el que es necessita (amb un marge de seguretat), convertint l'excedent especulatiu en
-ineficiÃ¨ncia tÃ¨cnica i agressiÃ³ paisatgÃ­stica.</p>
-<p><strong>Objectiu 2030:</strong> Assolir l'autosuficiÃ¨ncia elÃ¨ctrica sense sacrificar ni
-un metre quadrat de sÃ²l agrÃ­cola o natural.</p>
-</div>
+    <!-- Main Content -->
+    <section class="content-section">
+        <!-- Introduction -->
+        <div class="highlight-box">
+            <h3>💡 Concepte Clau: Dimensionament Ajustat</h3>
+            <p>Produir exactament el que es necessita (amb un marge de seguretat), convertint l'excedent especulatiu en
+                ineficiència tècnica i agressió paisatgística.</p>
+            <p><strong>Objectiu 2030:</strong> Assolir l'autosuficiència elèctrica sense sacrificar ni un metre quadrat
+                de sòl agrícola o natural.</p>
+        </div>
 
-<!-- Current Status -->
-<div class="axis-card">
-<h2 style="text-align: center; margin-bottom: 2rem;">ðŸ“Š SituaciÃ³ Actual (2025)</h2>
-<div class="grid-3">
-<div class="stat-card">
-<h3>Capacitat InstalÂ·lada</h3>
-<p style="font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 1rem 0;">312.9 kWp</p>
-<p>144.2 kWp PÃºblic + 168.7 kWp Privat</p>
-</div>
-<div class="stat-card">
-<h3>ProgrÃ©s 2030</h3>
-<p style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin: 1rem 0;">15%</p>
-<p>Ja assolit sense tocar sÃ²l agrÃ­cola</p>
-</div>
-<div class="stat-card">
-<h3>Objectiu Final</h3>
-<p style="font-size: 2.5rem; font-weight: 800; color: var(--primary-dark); margin: 1rem 0;">2.0
-MWp</p>
-<p>100% en teulades i sÃ²ls degradats</p>
-</div>
-</div>
-</div>
+        <!-- Current Status -->
+        <div class="axis-card">
+            <h2 style="text-align: center; margin-bottom: 2rem;">📊 Situació Actual (2025)</h2>
+            <div class="grid-3">
+                <div class="stat-card">
+                    <h3>Capacitat Instal·lada</h3>
+                    <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 1rem 0;">312.9 kWp</p>
+                    <p>144.2 kWp Públic + 168.7 kWp Privat</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Progrés 2030</h3>
+                    <p style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin: 1rem 0;">15%</p>
+                    <p>Ja assolit sense tocar sòl agrícola</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Objectiu Final</h3>
+                    <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary-dark); margin: 1rem 0;">2.0 MWp
+                    </p>
+                    <p>100% en teulades i sòls degradats</p>
+                </div>
+            </div>
+        </div>
 
-<!-- EIX 1: Legal Shield -->
-<div class="axis-card">
-<div class="axis-header">
-<div class="axis-number">1</div>
-<h2 class="axis-title">L'Escut Normatiu i Territorial</h2>
-</div>
-<p style="font-size: 1.1rem; color: #666; margin-bottom:
-2rem;"><strong>Expertise:</strong> Dret, Ecologia, Urbanisme</p>
-<p>Blindatge del sÃ²l no urbanitzable utilitzant la normativa existent per demostrar que les
-macro-instalÂ·lacions sÃ³n incompatibles amb el model territorial.</p>
+        <!-- EIX 1: Legal Shield -->
+        <div class="axis-card">
+            <div class="axis-header">
+                <div class="axis-number">1</div>
+                <h2 class="axis-title">L'Escut Normatiu i Territorial</h2>
+            </div>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;"><strong>Expertise:</strong> Dret, Ecologia,
+                Urbanisme</p>
+            <p>Blindatge del sòl no urbanitzable utilitzant la normativa existent per demostrar que les
+                macro-instal·lacions són incompatibles amb el model territorial.</p>
 
-<div class="action-item">
-<h4>âš–ï¸ 1.1. ModificaciÃ³ Puntual del POUM</h4>
-<p><strong>AcciÃ³:</strong> Iniciar immediatament una modificaciÃ³ del POUM per regular els
-usos en sÃ²l no urbanitzable.</p>
-<ul>
-<li><strong>Argument JurÃ­dic:</strong> Definir zones d'exclusiÃ³ basades en "Serveis
-EcosistÃ¨mics". No protegim nomÃ©s "vistes", protegim la funciÃ³ del sÃ²l (absorciÃ³ de COâ‚‚, regulaciÃ³
-hÃ­drica).</li>
-<li><strong>Trampa Legal:</strong> Utilitzar la normativa de ProtecciÃ³ del SÃ²l AgrÃ­cola
-d'Alt Valor. Si el sÃ²l Ã©s fÃ¨rtil, la Llei d'Espais Agraris de Catalunya dona preferÃ¨ncia a l'agricultura sobre la
-generaciÃ³ energÃ¨tica industrial.</li>
-</ul>
-</div>
+            <div class="action-item">
+                <h4>⚖️ 1.1. Modificació Puntual del POUM</h4>
+                <p><strong>Acció:</strong> Iniciar immediatament una modificació del POUM per regular els usos en sòl no
+                    urbanitzable.</p>
+                <ul>
+                    <li><strong>Argument Jurídic:</strong> Definir zones d'exclusió basades en "Serveis Ecosistèmics".
+                        No protegim només "vistes", protegim la funció del sòl (absorció de CO₂, regulació hídrica).
+                    </li>
+                    <li><strong>Trampa Legal:</strong> Utilitzar la normativa de Protecció del Sòl Agrícola d'Alt Valor.
+                        Si el sòl és fèrtil, la Llei d'Espais Agraris de Catalunya dona preferència a l'agricultura
+                        sobre la generació energètica industrial.</li>
+                </ul>
+            </div>
 
-<div class="action-item">
-<h4>ðŸžï¸ 1.2. El "Pla de Paisatge" com a Norma</h4>
-<p><strong>AcciÃ³:</strong> Redactar un CatÃ leg de Paisatge Local.</p>
-<ul>
-<li><strong>InnovaciÃ³:</strong> Introduir el concepte de <span
-class="key-concept">Paisatge TerapÃ¨utic</span>. Demostrar cientÃ­ficament que la idiosincrÃ sia rural de
-Sant Jordi impacta directament en la salut mental i fÃ­sica dels veÃ¯ns.</li>
-<li>Si una instalÂ·laciÃ³ trenca aquesta harmonia, atempta contra el benestar pÃºblic.</li>
-</ul>
-</div>
+            <div class="action-item">
+                <h4>🏞️ 1.2. El "Pla de Paisatge" com a Norma</h4>
+                <p><strong>Acció:</strong> Redactar un Catàleg de Paisatge Local.</p>
+                <ul>
+                    <li><strong>Innovació:</strong> Introduir el concepte de <span class="key-concept">Paisatge
+                            Terapèutic</span>. Demostrar científicament que la idiosincràsia rural de Sant Jordi impacta
+                        directament en la salut mental i física dels veïns.</li>
+                    <li>Si una instal·lació trenca aquesta harmonia, atempta contra el benestar públic.</li>
+                </ul>
+            </div>
 
-<div class="action-item">
-<h4>ðŸ¦‹ 1.3. ZonificaciÃ³ Restrictiva basada en la Biodiversitat</h4>
-<p><strong>AcciÃ³:</strong> Crear corredors biolÃ²gics intocables que connectin les zones
-boscoses i la riera.</p>
-<ul>
-<li><strong>Expert Ecologia:</strong> Les tanques perimetrals dels parcs solars fragmenten
-l'hÃ bitat.</li>
-<li>Si demostrem que Sant Jordi Ã©s un pas de fauna clau, podem limitar severament l'extensiÃ³ de qualsevol
-planta.</li>
-</ul>
-</div>
-</div>
+            <div class="action-item">
+                <h4>🦋 1.3. Zonificació Restrictiva basada en la Biodiversitat</h4>
+                <p><strong>Acció:</strong> Crear corredors biològics intocables que connectin les zones boscoses i la
+                    riera.</p>
+                <ul>
+                    <li><strong>Expert Ecologia:</strong> Les tanques perimetrals dels parcs solars fragmenten
+                        l'hàbitat.</li>
+                    <li>Si demostrem que Sant Jordi és un pas de fauna clau, podem limitar severament l'extensió de
+                        qualsevol planta.</li>
+                </ul>
+            </div>
+        </div>
 
-<!-- EIX 2: Technical Offensive -->
-<div class="axis-card">
-<div class="axis-header">
-<div class="axis-number">2</div>
-<h2 class="axis-title">L'Ofensiva TÃ¨cnica i EnergÃ¨tica</h2>
-</div>
-<p style="font-size: 1.1rem; color: #666; margin-bottom:
-2rem;"><strong>Expertise:</strong> Xarxes, Renovables, Clima</p>
-<p>Demostrem que <strong>ja tenim un pla</strong> per complir el 2030, fent innecessÃ ries
-les instalÂ·lacions externes. Si el municipi ja compleix, qualsevol instalÂ·laciÃ³ extra Ã©s especulaciÃ³
-innecessÃ ria.</p>
+        <!-- EIX 2: Technical Offensive -->
+        <div class="axis-card">
+            <div class="axis-header">
+                <div class="axis-number">2</div>
+                <h2 class="axis-title">L'Ofensiva Tècnica i Energètica</h2>
+            </div>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;"><strong>Expertise:</strong> Xarxes,
+                Renovables, Clima</p>
+            <p>Demostrem que <strong>ja tenim un pla</strong> per complir el 2030, fent innecessàries les instal·lacions
+                externes. Si el municipi ja compleix, qualsevol instal·lació extra és especulació innecessària.</p>
 
-<div class="action-item">
-<h4>ðŸ“ 2.1. CÃ lcul de la "Demanda Objectiu 2030"</h4>
-<p>Hem de calcular la demanda real Dâ‚‚â‚€â‚ƒâ‚€:</p>
-<div class="formula">
-Dâ‚‚â‚€â‚ƒâ‚€ = (Consum_actual + ElectrificaciÃ³_calefacciÃ³ + CÃ rrega_VE) Ã— 1.1
-</div>
-<p><em>*L'1.1 Ã©s un marge de seguretat del 10%</em></p>
-<ul>
-<li><strong>EstratÃ¨gia:</strong> Presentar un informe tÃ¨cnic on es demostri que amb les
-teulades existents (naus agrÃ­coles, equipaments pÃºblics i habitatges) es cobreix el 100% d'aquesta
-demanda.</li>
-<li>Si la demanda estÃ  coberta, es denega la "utilitat pÃºblica" de projectes sobre terra.</li>
-</ul>
-</div>
+            <div class="action-item">
+                <h4>📐 2.1. Càlcul de la "Demanda Objectiu 2030"</h4>
+                <p>Hem de calcular la demanda real D₂₀₃₀:</p>
+                <div class="formula">
+                    D₂₀₃₀ = (Consum_actual + Electrificació_calefacció + Càrrega_VE) × 1.1
+                </div>
+                <p><em>*L'1.1 és un marge de seguretat del 10%</em></p>
+                <ul>
+                    <li><strong>Estratègia:</strong> Presentar un informe tècnic on es demostri que amb les teulades
+                        existents (naus agrícoles, equipaments públics i habitatges) es cobreix el 100% d'aquesta
+                        demanda.</li>
+                    <li>Si la demanda està coberta, es denega la "utilitat pública" de projectes sobre terra.</li>
+                </ul>
+            </div>
 
-<div class="action-item">
-<h4>âš¡ 2.2. La Comunitat EnergÃ¨tica Local (CEL) com a Barrera</h4>
-<p><strong>AcciÃ³:</strong> Crear la "Comunitat EnergÃ¨tica Sant Jordi Rural".</p>
-<ul>
-<li><strong>Jugada Mestra:</strong> La normativa europea (Directiva RED II) prioritza la
-participaciÃ³ ciutadana.</li>
-<li>Si l'Ajuntament i els veÃ¯ns tenen la seva prÃ²pia xarxa de generaciÃ³ distribuÃ¯da, poden alÂ·legar <span
-class="key-concept">SaturaciÃ³ TÃ¨cnica de la Xarxa</span>.</li>
-<li><strong>Expert Xarxes:</strong> "Ocupem el cable abans que ells". Si ocupem la
-capacitat del transformador local amb la nostra energia, no queda espai fÃ­sic ni elÃ¨ctric per a macro-parcs
-externs.</li>
-</ul>
-</div>
+            <div class="action-item">
+                <h4>⚡ 2.2. La Comunitat Energètica Local (CEL) com a Barrera</h4>
+                <p><strong>Acció:</strong> Crear la "Comunitat Energètica Sant Jordi Rural".</p>
+                <ul>
+                    <li><strong>Jugada Mestra:</strong> La normativa europea (Directiva RED II) prioritza la
+                        participació ciutadana.</li>
+                    <li>Si l'Ajuntament i els veïns tenen la seva pròpia xarxa de generació distribuïda, poden al·legar
+                        <span class="key-concept">Saturació Tècnica de la Xarxa</span>.</li>
+                    <li><strong>Expert Xarxes:</strong> "Ocupem el cable abans que ells". Si ocupem la capacitat del
+                        transformador local amb la nostra energia, no queda espai físic ni elèctric per a macro-parcs
+                        externs.</li>
+                </ul>
+            </div>
 
-<div class="action-item">
-<h4>ðŸ“‹ 2.3. El PAESC com a Eina de LimitaciÃ³</h4>
-<p>Revisar el PAESC (Pla d'AcciÃ³ per l'Energia Sostenible i el Clima).</p>
-<ul>
-<li><strong>AcciÃ³:</strong> Ajustar el PAESC per prioritzar l'eficiÃ¨ncia energÃ¨tica
-(aÃ¯llament de cases) per sobre de la generaciÃ³ massiva.</li>
-<li>Menys consum implica menys necessitat de plaques.</li>
-</ul>
-</div>
-</div>
+            <div class="action-item">
+                <h4>📋 2.3. El PAESC com a Eina de Limitació</h4>
+                <p>Revisar el PAESC (Pla d'Acció per l'Energia Sostenible i el Clima).</p>
+                <ul>
+                    <li><strong>Acció:</strong> Ajustar el PAESC per prioritzar l'eficiència energètica (aïllament de
+                        cases) per sobre de la generació massiva.</li>
+                    <li>Menys consum implica menys necessitat de plaques.</li>
+                </ul>
+            </div>
+        </div>
 
-<!-- EIX 3: Social Strategy -->
-<div class="axis-card">
-<div class="axis-header">
-<div class="axis-number">3</div>
-<h2 class="axis-title">EstratÃ¨gia Social i de "Branding"</h2>
-</div>
-<p style="font-size: 1.1rem; color: #666; margin-bottom:
-2rem;"><strong>Expertise:</strong> Sociologia, Normativa Europea</p>
-<p>Per guanyar, cal que el poble no sembli insolidari (NIMBY), sinÃ³ avantguardista.</p>
+        <!-- EIX 3: Social Strategy -->
+        <div class="axis-card">
+            <div class="axis-header">
+                <div class="axis-number">3</div>
+                <h2 class="axis-title">Estratègia Social i de "Branding"</h2>
+            </div>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;"><strong>Expertise:</strong> Sociologia,
+                Normativa Europea</p>
+            <p>Per guanyar, cal que el poble no sembli insolidari (NIMBY), sinó avantguardista.</p>
 
-<div class="action-item">
-<h4>ðŸŒ± 3.1. La Marca "Reserva d'Energia Lenta" (Slow Energy)</h4>
-<ul>
-<li>Vendre Sant Jordi Desvalls com un model pilot europeu de transiciÃ³ energÃ¨tica respectuosa.</li>
-<li><strong>Argument:</strong> "No estem contra les renovables, estem a favor de la
-<em>Renovable de KilÃ²metre 0</em>".</li>
-</ul>
-</div>
+            <div class="action-item">
+                <h4>🌱 3.1. La Marca "Reserva d'Energia Lenta" (Slow Energy)</h4>
+                <ul>
+                    <li>Vendre Sant Jordi Desvalls com un model pilot europeu de transició energètica respectuosa.</li>
+                    <li><strong>Argument:</strong> "No estem contra les renovables, estem a favor de la <em>Renovable de
+                            Kilòmetre 0</em>".</li>
+                </ul>
+            </div>
 
-<div class="action-item">
-<h4>ðŸ’° 3.2. La Taxa d'Impacte Visual i Social</h4>
-<ul>
-<li><strong>Proposta:</strong> Aprovar ordenances fiscals que gravin drÃ sticament les
-instalÂ·lacions que no siguin d'autoconsum local.</li>
-<li>Basar-se en la "pÃ¨rdua de valor patrimonial" del municipi.</li>
-<li>Fer que sigui econÃ²micament inviable per a un fons d'inversiÃ³ instalÂ·lar-se.</li>
-</ul>
-</div>
+            <div class="action-item">
+                <h4>💰 3.2. La Taxa d'Impacte Visual i Social</h4>
+                <ul>
+                    <li><strong>Proposta:</strong> Aprovar ordenances fiscals que gravin dràsticament les instal·lacions
+                        que no siguin d'autoconsum local.</li>
+                    <li>Basar-se en la "pèrdua de valor patrimonial" del municipi.</li>
+                    <li>Fer que sigui econòmicament inviable per a un fons d'inversió instal·lar-se.</li>
+                </ul>
+            </div>
 
-<div class="action-item">
-<h4>ðŸšœ 3.3. AlianÃ§a amb el Sector Agrari (Agrivoltaica Real)</h4>
-<ul>
-<li>Si s'ha de posar alguna placa a terra (perquÃ¨ no arribem amb les teulades), que sigui exclusivament
-<strong>Agrivoltaica d'Hivernacle o Elevada</strong>.</li>
-<li>Gestionada per pagesos locals, i dimensionada nomÃ©s per a la maquinÃ ria agrÃ­cola.</li>
-</ul>
-</div>
-</div>
+            <div class="action-item">
+                <h4>🚜 3.3. Aliança amb el Sector Agrari (Agrivoltaica Real)</h4>
+                <ul>
+                    <li>Si s'ha de posar alguna placa a terra (perquè no arribem amb les teulades), que sigui
+                        exclusivament <strong>Agrivoltaica d'Hivernacle o Elevada</strong>.</li>
+                    <li>Gestionada per pagesos locals, i dimensionada només per a la maquinària agrícola.</li>
+                </ul>
+            </div>
+        </div>
 
-<!-- Implementation Roadmap -->
-<div class="axis-card">
-<h2 style="text-align: center; margin-bottom: 2rem;">ðŸ—ºï¸ Full de Ruta d'ImplementaciÃ³</h2>
-<table class="roadmap-table">
-<thead>
-<tr>
-<th>Fase</th>
-<th>AcciÃ³ Principal</th>
-<th>Actors Clau</th>
-<th>Objectiu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Immediata</strong></td>
-<td><strong>MoratÃ²ria de llicÃ¨ncies</strong> + Inici ModificaciÃ³ POUM. CreaciÃ³ de la
-Comunitat EnergÃ¨tica (CEL).</td>
-<td>Ajuntament + Juristes</td>
-<td>Aturar el rellotge i ocupar la xarxa elÃ¨ctrica.</td>
-</tr>
-<tr>
-<td><strong>Curt Termini</strong></td>
-<td><strong>Auditoria de Teulades</strong>. Cens de naus agrÃ­coles i teulades domÃ¨stiques
-aptes.</td>
-<td>Enginyers + VeÃ¯ns</td>
-<td>Demostrar capacitat d'autosuficiÃ¨ncia sense tocar el sÃ²l.</td>
-</tr>
-<tr>
-<td><strong>Mig Termini</strong><br>(2026-2030)</td>
-<td>InstalÂ·laciÃ³ progressiva de plaques en teulades segons demanda real. <strong>CertificaciÃ³ de
-Paisatge Protegit</strong>.</td>
-<td>Societat Civil + EcÃ²legs</td>
-<td>Blindatge legal i fÃ­sic del territori.</td>
-</tr>
-</tbody>
-</table>
-</div>
+        <!-- Implementation Roadmap -->
+        <div class="axis-card">
+            <h2 style="text-align: center; margin-bottom: 2rem;">🗺️ Full de Ruta d'Implementació</h2>
+            <table class="roadmap-table">
+                <thead>
+                    <tr>
+                        <th>Fase</th>
+                        <th>Acció Principal</th>
+                        <th>Actors Clau</th>
+                        <th>Objectiu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Immediata</strong></td>
+                        <td><strong>Moratòria de llicències</strong> + Inici Modificació POUM. Creació de la Comunitat
+                            Energètica (CEL).</td>
+                        <td>Ajuntament + Juristes</td>
+                        <td>Aturar el rellotge i ocupar la xarxa elèctrica.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Curt Termini</strong></td>
+                        <td><strong>Auditoria de Teulades</strong>. Cens de naus agrícoles i teulades domèstiques aptes.
+                        </td>
+                        <td>Enginyers + Veïns</td>
+                        <td>Demostrar capacitat d'autosuficiència sense tocar el sòl.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mig Termini</strong><br>(2026-2030)</td>
+                        <td>Instal·lació progressiva de plaques en teulades segons demanda real. <strong>Certificació de
+                                Paisatge Protegit</strong>.</td>
+                        <td>Societat Civil + Ecòlegs</td>
+                        <td>Blindatge legal i físic del territori.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-<!-- Brilliant Touch -->
-<div class="highlight-box" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color:
-var(--accent);">
-<h3>ðŸ’Ž El Toc Brillant: ClÃ usula de Reversibilitat 2050</h3>
-<p>Introduir en la normativa local la <strong>"ClÃ usula de Tecnologia
-TransitÃ²ria"</strong>:</p>
-<blockquote style="border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; font-style:
-italic; color: #555;">
-"Qualsevol instalÂ·laciÃ³ renovable en sÃ²l no urbanitzable ha de tenir una vida Ãºtil mÃ xima de 20 anys, amb obligaciÃ³ de
-desmantellament garantit mitjanÃ§ant fianÃ§a bancÃ ria, sota la premissa que pel 2050 la tecnologia (hidrogen, fusiÃ³,
-bateries d'alta densitat) farÃ  innecessÃ ria l'ocupaciÃ³ extensiva del territori."
-</blockquote>
-<p><strong>Impacte:</strong> AixÃ² espanta els inversors especulatius que busquen drets
-indefinits sobre la terra, perÃ² encaixa perfectament amb la voluntat de cobrir necessitats actuals sense hipotecar el
-futur.</p>
-</div>
+        <!-- Brilliant Touch -->
+        <div class="highlight-box"
+            style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color: var(--accent);">
+            <h3>💎 El Toc Brillant: Clàusula de Reversibilitat 2050</h3>
+            <p>Introduir en la normativa local la <strong>"Clàusula de Tecnologia Transitòria"</strong>:</p>
+            <blockquote
+                style="border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: #555;">
+                "Qualsevol instal·lació renovable en sòl no urbanitzable ha de tenir una vida útil màxima de 20 anys,
+                amb obligació de desmantellament garantit mitjançant fiança bancària, sota la premissa que pel 2050 la
+                tecnologia (hidrogen, fusió, bateries d'alta densitat) farà innecessària l'ocupació extensiva del
+                territori."
+            </blockquote>
+            <p><strong>Impacte:</strong> Això espanta els inversors especulatius que busquen drets indefinits sobre la
+                terra, però encaixa perfectament amb la voluntat de cobrir necessitats actuals sense hipotecar el futur.
+            </p>
+        </div>
 
-<!-- Back to Home -->
-<div style="text-align: center; margin: 4rem 0;">
-<a href="../index.html" class="btn primary">
-<i data-lucide="home"></i> Tornar a la PÃ gina Principal
-</a>
-</div>
-</section>
+        <!-- Back to Home -->
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="../index.html" class="btn primary">
+                <i data-lucide="home"></i> Tornar a la Pàgina Principal
+            </a>
+        </div>
+    </section>
 
-<script src="../script.js"></script>
-<script>lucide.createIcons();</script>
+    <script src="../script.js"></script>
+    <script>lucide.createIcons();</script>
 </body>
 
 </html>
