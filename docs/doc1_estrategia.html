@@ -1,242 +1,485 @@
-<!DOCTYPE html>
-<html lang="ca">
+\u003c!DOCTYPE html\u003e
+\u003chtml lang="ca"\u003e
 
-<head>
-    <meta charset="UTF-8">
-    <title>Pla Estratègic Sant Jordi 2030</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;600;800&display=swap');
+\u003chead\u003e
+\u003cmeta charset="UTF-8"\u003e
+\u003cmeta name="viewport" content="width=device-width, initial-scale=1.0"\u003e
+\u003ctitle\u003eProtocol Sant Jordi | Sobirania Rural de Precisió\u003c/title\u003e
+\u003clink rel="preconnect" href="https://fonts.googleapis.com"\u003e
+\u003clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin\u003e
+\u003clink
+href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+rel="stylesheet"\u003e
+\u003clink rel="stylesheet" href="../style.css"\u003e
+\u003cscript src="https://unpkg.com/lucide@latest"\u003e\u003c/script\u003e
+\u003cstyle\u003e
+body {
+background: var(--bg);
+}
 
-        :root {
-            --primary: #2d5a27;
-            --text: #333;
-            --bg: #fff;
-        }
+.doc-hero {
+min-height: 60vh;
+background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 6rem 5%;
+position: relative;
+overflow: hidden;
+}
 
-        body {
-            font-family: 'Merriweather', serif;
-            color: var(--text);
-            line-height: 1.8;
-            max-width: 210mm;
-            margin: 0 auto;
-            background: #f9f9f9;
-            padding: 40px;
-        }
+.doc-hero::before {
+content: '';
+position: absolute;
+width: 500px;
+height: 500px;
+background: rgba(255, 255, 255, 0.05);
+border-radius: 50%;
+top: -200px;
+right: -200px;
+}
 
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-                width: 100%;
-            }
+.doc-hero-content {
+max-width: 800px;
+z-index: 2;
+}
 
-            .no-print {
-                display: none;
-            }
+.doc-hero h1 {
+font-size: 3.5rem;
+color: white;
+margin-bottom: 1rem;
+}
 
-            .page-break {
-                page-break-before: always;
-            }
-        }
+.doc-hero .subtitle {
+font-size: 1.5rem;
+color: var(--accent);
+margin-bottom: 2rem;
+}
 
-        .cover-page {
-            height: 297mm;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            page-break-after: always;
-        }
+.doc-hero p {
+font-size: 1.1rem;
+opacity: 0.9;
+line-height: 1.8;
+}
 
-        .cover-img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            margin: 2rem 0;
-            border-radius: 5px;
-        }
+.content-section {
+padding: 4rem 5%;
+max-width: 1200px;
+margin: 0 auto;
+}
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
+.axis-card {
+background: white;
+padding: 3rem;
+border-radius: 20px;
+box-shadow: var(--shadow);
+margin-bottom: 3rem;
+border-left: 5px solid var(--primary);
+}
 
-        h2,
-        h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-            margin-top: 2rem;
-        }
+.axis-header {
+display: flex;
+align-items: center;
+gap: 1.5rem;
+margin-bottom: 2rem;
+}
 
-        .subtitle {
-            font-size: 1.5rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
+.axis-number {
+background: var(--primary);
+color: white;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.8rem;
+font-weight: 800;
+flex-shrink: 0;
+}
 
-        .meta {
-            margin-top: auto;
-            font-size: 0.9rem;
-            color: #888;
-        }
+.axis-title {
+font-size: 2rem;
+color: var(--primary-dark);
+margin: 0;
+}
 
-        .content {
-            background: white;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-        }
+.action-item {
+background: #f8f9fa;
+padding: 1.5rem;
+border-radius: 10px;
+margin-bottom: 1.5rem;
+border-left: 3px solid var(--accent);
+}
 
-        @media print {
-            .content {
-                box-shadow: none;
-                padding: 0;
-            }
-        }
+.action-item h4 {
+color: var(--primary);
+margin-bottom: 0.5rem;
+font-size: 1.2rem;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-        }
+.action-item ul {
+margin-left: 1.5rem;
+color: #555;
+}
 
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
+.action-item ul li {
+margin-bottom: 0.5rem;
+}
 
-        th {
-            background-color: var(--primary);
-            color: white;
-        }
+.highlight-box {
+background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+padding: 2rem;
+border-radius: 15px;
+margin: 2rem 0;
+border-left: 5px solid var(--primary);
+}
 
-        .btn-print {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+.highlight-box h3 {
+color: var(--primary-dark);
+margin-bottom: 1rem;
+}
 
-        .highlight-box {
-            background: #e8f5e9;
-            padding: 20px;
-            border-left: 5px solid var(--primary);
-            margin: 20px 0;
-        }
-    </style>
-</head>
+.roadmap-table {
+width: 100%;
+border-collapse: collapse;
+margin: 2rem 0;
+background: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: var(--shadow);
+}
 
-<body>
-    <button class="btn-print no-print" onclick="window.print()">🖨️ Imprimir a PDF</button>
+.roadmap-table th {
+background: var(--primary);
+color: white;
+padding: 1.2rem;
+text-align: left;
+font-weight: 600;
+}
 
-    <div class="content">
-        <!-- Cover -->
-        <div class="cover-page">
-            <div class="logo">Ajuntament de Sant Jordi Desvalls</div>
-            <img src="../img/cover_strategy.png" alt="Sant Jordi Rural" class="cover-img">
-            <h1>Pla Estratègic 2030</h1>
-            <div class="subtitle">Sobirania Energètica i Protecció Rural</div>
-            <div class="meta">
-                <p>Document Aprovat Inicialment</p>
-                <p>Desembre 2025</p>
-            </div>
-        </div>
+.roadmap-table td {
+padding: 1.2rem;
+border-bottom: 1px solid #eee;
+}
 
-        <!-- Index -->
-        <div class="page-break">
-            <h2>Índex de Continguts</h2>
-            <ul>
-                <li>1. Visió Executiva: "Ni un pam de terra perduda"</li>
-                <li>2. Diagnòstic Tècnic: On som realment?</li>
-                <li>3. Marc Normatiu: L'Escut Legal</li>
-                <li>4. Estratègia Tècnica: Els 3 Cercles</li>
-                <li>5. Model de Gestió: La Taxa Municipal</li>
-            </ul>
-        </div>
+.roadmap-table tr:last-child td {
+border-bottom: none;
+}
 
-        <!-- Content -->
-        <h2>1. Visió Executiva</h2>
-        <p>Aquest document estableix el full de ruta perquè Sant Jordi Desvalls esdevingui un referent en la transició
-            energètica descentralitzada. L'objectiu és clar: assolir l'autosuficiència elèctrica l'any 2030 sense
-            sacrificar el caràcter rural del municipi.</p>
+.roadmap-table tr:hover {
+background: #f8f9fa;
+}
 
-        <h2>2. Diagnòstic Tècnic</h2>
-        <p>El punt de partida és molt més favorable del que sembla. La combinació d'iniciativa pública i privada ja ha
-            posat el municipi en marxa.</p>
+.formula {
+background: #f8f9fa;
+padding: 1.5rem;
+border-radius: 10px;
+font-family: 'Courier New', monospace;
+font-size: 1.1rem;
+text-align: center;
+margin: 1.5rem 0;
+border: 2px dashed var(--primary);
+}
 
-        <table>
-            <tr>
-                <th>Indicador</th>
-                <th>Dades Actuals (2025)</th>
-                <th>Objectiu 2030</th>
-            </tr>
-            <tr>
-                <td><strong>Potència Fotovoltaica</strong></td>
-                <td>
-                    <img src="../img/icaen_rac_data.png" alt="Dades ICAEN"
-                        style="width: 100%; max-width: 300px; border-radius: 5px; cursor: zoom-in;"
-                        onclick="openLightbox(this.src)">
-                    <br>
-                    <span style="font-size: 0.8rem; color: #666;">(Clica per ampliar)</span>
-                    <br>
-                    <a href="https://www.instamaps.cat/geocatweb/visor.html?businessid=88383866-515c-4838-8318-5313366572ac&title=Mapa%20d%27instal%C2%B7lacions%20d%27autoconsum%20fotovoltaic%20a%20Catalunya"
-                        target="_blank" style="color: var(--primary); font-size: 0.9rem;">Verificar al Visor ICAEN ↗</a>
-                </td>
-                <td>
-                    <strong>Total: 312.9 kWp</strong><br>
-                    (144.2 Públic + 168.7 Privat)<br><br>
-                    <strong>15% de l'Objectiu 2030</strong><br>
-                    assolit en 2025.
-                </td>
-            </tr>
-        </table>
+.back-btn {
+position: fixed;
+top: 2rem;
+left: 2rem;
+background: white;
+color: var(--primary);
+padding: 0.8rem 1.5rem;
+border-radius: 50px;
+box-shadow: var(--shadow);
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: 600;
+transition: all 0.3s;
+z-index: 1000;
+}
 
-        <div class="highlight-box">
-            <h3>Impacte en l'Estratègia</h3>
-            <p>El diagnòstic actualitzat (Juny 2024) demostra que la iniciativa privada (34 instal·lacions) és un motor
-                clau. Amb 312,9 kWp ja instal·lats, el municipi avança fermament cap a la sobirania energètica sense
-                necessitat de macro-parcs.</p>
-        </div>
+.back-btn:hover {
+transform: translateX(-5px);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
 
-        <div class="page-break"></div>
+.key-concept {
+background: var(--accent);
+color: white;
+padding: 0.3rem 0.8rem;
+border-radius: 5px;
+font-weight: 600;
+display: inline-block;
+margin: 0.2rem;
+}
 
-        <h2>3. Marc Normatiu: L'Escut Legal</h2>
-        <p>Per protegir el territori de l'especulació externa, s'activaran dos mecanismes:</p>
-        <h3>3.1. Modificació del POUM</h3>
-        <p>Es crearà la qualificació <strong>"Sòl de Valor Agropaisatgístic Estratègic"</strong>. En aquestes
-            zones,
-            quedarà prohibida la instal·lació de parcs fotovoltaics a terra.</p>
+@media print {
+.back-btn {
+display: none;
+}
+}
+\u003c/style\u003e
+\u003c/head\u003e
 
-        <h2>4. Estratègia Tècnica: Els 3 Cercles</h2>
-        <ul>
-            <li><strong>Cercle 1 (Consolidació):</strong> Nucli Urbà. Posar a ple rendiment el model de "Taxa
-                Municipal"
-                del Pavelló (70 kWp per a veïns).</li>
-            <li><strong>Cercle 2 (Corona Agrícola):</strong> Naus i magatzems. Programa "Teulada Neta" (retirada
-                d'uralita a canvi de coberta).</li>
-            <li><strong>Cercle 3 (Sòls Degradats):</strong> Antics abocadors o zones industrials per a petites
-                plantes.
-            </li>
-        </ul>
+\u003cbody\u003e
+\u003ca href="../index.html" class="back-btn"\u003e
+\u003ci data-lucide="arrow-left"\u003e\u003c/i\u003e Tornar
+\u003c/a\u003e
 
-        <h2>5. Model de Gestió: La Taxa</h2>
-        <p>L'èxit de la Sala Nova i el Pavelló demostra que el model funciona. L'Ajuntament fa la inversió i els
-            veïns
-            adquireixen "drets d'ús" (0.5 a 2 kWp) pagant una taxa municipal. Això simplifica la burocràcia i
-            democratitza l'accés.</p>
-    </div>
-    <script src="../script.js"></script>
-</body>
+\u003c!-- Hero Section --\u003e
+\u003csection class="doc-hero"\u003e
+\u003cdiv class="doc-hero-content"\u003e
+\u003cspan class="badge"\u003eDocument Estratègic\u003c/span\u003e
+\u003ch1\u003eProtocol Sant Jordi\u003c/h1\u003e
+\u003cp class="subtitle"\u003eSobirania Rural de Precisió\u003c/p\u003e
+\u003cp\u003eUna estratègia integral, dissenyada per ser \u003cstrong\u003erobusta jurídicament, viable tècnicament i
+cohesionadora socialment\u003c/strong\u003e. No es tracta de dir "NO" a les renovables, sinó de dir
+\u003cstrong\u003e"Així SÍ, i només Així"\u003c/strong\u003e, recuperant el control del territori.\u003c/p\u003e
+\u003c/div\u003e
+\u003c/section\u003e
 
-</html>
+\u003c!-- Main Content --\u003e
+\u003csection class="content-section"\u003e
+\u003c!-- Introduction --\u003e
+\u003cdiv class="highlight-box"\u003e
+\u003ch3\u003e💡 Concepte Clau: Dimensionament Ajustat\u003c/h3\u003e
+\u003cp\u003eProduir exactament el que es necessita (amb un marge de seguretat), convertint l'excedent especulatiu en
+ineficiència tècnica i agressió paisatgística.\u003c/p\u003e
+\u003cp\u003e\u003cstrong\u003eObjectiu 2030:\u003c/strong\u003e Assolir l'autosuficiència elèctrica sense sacrificar ni
+un metre quadrat de sòl agrícola o natural.\u003c/p\u003e
+\u003c/div\u003e
+
+\u003c!-- Current Status --\u003e
+\u003cdiv class="axis-card"\u003e
+\u003ch2 style="text-align: center; margin-bottom: 2rem;"\u003e📊 Situació Actual (2025)\u003c/h2\u003e
+\u003cdiv class="grid-3"\u003e
+\u003cdiv class="stat-card"\u003e
+\u003ch3\u003eCapacitat Instal·lada\u003c/h3\u003e
+\u003cp style="font-size: 2.5rem; font-weight: 800; color: var(--primary); margin: 1rem 0;"\u003e312.9 kWp\u003c/p\u003e
+\u003cp\u003e144.2 kWp Públic + 168.7 kWp Privat\u003c/p\u003e
+\u003c/div\u003e
+\u003cdiv class="stat-card"\u003e
+\u003ch3\u003eProgrés 2030\u003c/h3\u003e
+\u003cp style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin: 1rem 0;"\u003e15%\u003c/p\u003e
+\u003cp\u003eJa assolit sense tocar sòl agrícola\u003c/p\u003e
+\u003c/div\u003e
+\u003cdiv class="stat-card"\u003e
+\u003ch3\u003eObjectiu Final\u003c/h3\u003e
+\u003cp style="font-size: 2.5rem; font-weight: 800; color: var(--primary-dark); margin: 1rem 0;"\u003e2.0
+MWp\u003c/p\u003e
+\u003cp\u003e100% en teulades i sòls degradats\u003c/p\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+
+\u003c!-- EIX 1: Legal Shield --\u003e
+\u003cdiv class="axis-card"\u003e
+\u003cdiv class="axis-header"\u003e
+\u003cdiv class="axis-number"\u003e1\u003c/div\u003e
+\u003ch2 class="axis-title"\u003eL'Escut Normatiu i Territorial\u003c/h2\u003e
+\u003c/div\u003e
+\u003cp style="font-size: 1.1rem; color: #666; margin-bottom:
+2rem;"\u003e\u003cstrong\u003eExpertise:\u003c/strong\u003e Dret, Ecologia, Urbanisme\u003c/p\u003e
+\u003cp\u003eBlindatge del sòl no urbanitzable utilitzant la normativa existent per demostrar que les
+macro-instal·lacions són incompatibles amb el model territorial.\u003c/p\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e⚖️ 1.1. Modificació Puntual del POUM\u003c/h4\u003e
+\u003cp\u003e\u003cstrong\u003eAcció:\u003c/strong\u003e Iniciar immediatament una modificació del POUM per regular els
+usos en sòl no urbanitzable.\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eArgument Jurídic:\u003c/strong\u003e Definir zones d'exclusió basades en "Serveis
+Ecosistèmics". No protegim només "vistes", protegim la funció del sòl (absorció de CO₂, regulació
+hídrica).\u003c/li\u003e
+\u003cli\u003e\u003cstrong\u003eTrampa Legal:\u003c/strong\u003e Utilitzar la normativa de Protecció del Sòl Agrícola
+d'Alt Valor. Si el sòl és fèrtil, la Llei d'Espais Agraris de Catalunya dona preferència a l'agricultura sobre la
+generació energètica industrial.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e🏞️ 1.2. El "Pla de Paisatge" com a Norma\u003c/h4\u003e
+\u003cp\u003e\u003cstrong\u003eAcció:\u003c/strong\u003e Redactar un Catàleg de Paisatge Local.\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eInnovació:\u003c/strong\u003e Introduir el concepte de \u003cspan
+class="key-concept"\u003ePaisatge Terapèutic\u003c/span\u003e. Demostrar científicament que la idiosincràsia rural de
+Sant Jordi impacta directament en la salut mental i física dels veïns.\u003c/li\u003e
+\u003cli\u003eSi una instal·lació trenca aquesta harmonia, atempta contra el benestar públic.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e🦋 1.3. Zonificació Restrictiva basada en la Biodiversitat\u003c/h4\u003e
+\u003cp\u003e\u003cstrong\u003eAcció:\u003c/strong\u003e Crear corredors biològics intocables que connectin les zones
+boscoses i la riera.\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eExpert Ecologia:\u003c/strong\u003e Les tanques perimetrals dels parcs solars fragmenten
+l'hàbitat.\u003c/li\u003e
+\u003cli\u003eSi demostrem que Sant Jordi és un pas de fauna clau, podem limitar severament l'extensió de qualsevol
+planta.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+
+\u003c!-- EIX 2: Technical Offensive --\u003e
+\u003cdiv class="axis-card"\u003e
+\u003cdiv class="axis-header"\u003e
+\u003cdiv class="axis-number"\u003e2\u003c/div\u003e
+\u003ch2 class="axis-title"\u003eL'Ofensiva Tècnica i Energètica\u003c/h2\u003e
+\u003c/div\u003e
+\u003cp style="font-size: 1.1rem; color: #666; margin-bottom:
+2rem;"\u003e\u003cstrong\u003eExpertise:\u003c/strong\u003e Xarxes, Renovables, Clima\u003c/p\u003e
+\u003cp\u003eDemostrem que \u003cstrong\u003eja tenim un pla\u003c/strong\u003e per complir el 2030, fent innecessàries
+les instal·lacions externes. Si el municipi ja compleix, qualsevol instal·lació extra és especulació
+innecessària.\u003c/p\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e📐 2.1. Càlcul de la "Demanda Objectiu 2030"\u003c/h4\u003e
+\u003cp\u003eHem de calcular la demanda real D₂₀₃₀:\u003c/p\u003e
+\u003cdiv class="formula"\u003e
+D₂₀₃₀ = (Consum_actual + Electrificació_calefacció + Càrrega_VE) × 1.1
+\u003c/div\u003e
+\u003cp\u003e\u003cem\u003e*L'1.1 és un marge de seguretat del 10%\u003c/em\u003e\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eEstratègia:\u003c/strong\u003e Presentar un informe tècnic on es demostri que amb les
+teulades existents (naus agrícoles, equipaments públics i habitatges) es cobreix el 100% d'aquesta
+demanda.\u003c/li\u003e
+\u003cli\u003eSi la demanda està coberta, es denega la "utilitat pública" de projectes sobre terra.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e⚡ 2.2. La Comunitat Energètica Local (CEL) com a Barrera\u003c/h4\u003e
+\u003cp\u003e\u003cstrong\u003eAcció:\u003c/strong\u003e Crear la "Comunitat Energètica Sant Jordi Rural".\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eJugada Mestra:\u003c/strong\u003e La normativa europea (Directiva RED II) prioritza la
+participació ciutadana.\u003c/li\u003e
+\u003cli\u003eSi l'Ajuntament i els veïns tenen la seva pròpia xarxa de generació distribuïda, poden al·legar \u003cspan
+class="key-concept"\u003eSaturació Tècnica de la Xarxa\u003c/span\u003e.\u003c/li\u003e
+\u003cli\u003e\u003cstrong\u003eExpert Xarxes:\u003c/strong\u003e "Ocupem el cable abans que ells". Si ocupem la
+capacitat del transformador local amb la nostra energia, no queda espai físic ni elèctric per a macro-parcs
+externs.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e📋 2.3. El PAESC com a Eina de Limitació\u003c/h4\u003e
+\u003cp\u003eRevisar el PAESC (Pla d'Acció per l'Energia Sostenible i el Clima).\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eAcció:\u003c/strong\u003e Ajustar el PAESC per prioritzar l'eficiència energètica
+(aïllament de cases) per sobre de la generació massiva.\u003c/li\u003e
+\u003cli\u003eMenys consum implica menys necessitat de plaques.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+
+\u003c!-- EIX 3: Social Strategy --\u003e
+\u003cdiv class="axis-card"\u003e
+\u003cdiv class="axis-header"\u003e
+\u003cdiv class="axis-number"\u003e3\u003c/div\u003e
+\u003ch2 class="axis-title"\u003eEstratègia Social i de "Branding"\u003c/h2\u003e
+\u003c/div\u003e
+\u003cp style="font-size: 1.1rem; color: #666; margin-bottom:
+2rem;"\u003e\u003cstrong\u003eExpertise:\u003c/strong\u003e Sociologia, Normativa Europea\u003c/p\u003e
+\u003cp\u003ePer guanyar, cal que el poble no sembli insolidari (NIMBY), sinó avantguardista.\u003c/p\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e🌱 3.1. La Marca "Reserva d'Energia Lenta" (Slow Energy)\u003c/h4\u003e
+\u003cul\u003e
+\u003cli\u003eVendre Sant Jordi Desvalls com un model pilot europeu de transició energètica respectuosa.\u003c/li\u003e
+\u003cli\u003e\u003cstrong\u003eArgument:\u003c/strong\u003e "No estem contra les renovables, estem a favor de la
+\u003cem\u003eRenovable de Kilòmetre 0\u003c/em\u003e".\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e💰 3.2. La Taxa d'Impacte Visual i Social\u003c/h4\u003e
+\u003cul\u003e
+\u003cli\u003e\u003cstrong\u003eProposta:\u003c/strong\u003e Aprovar ordenances fiscals que gravin dràsticament les
+instal·lacions que no siguin d'autoconsum local.\u003c/li\u003e
+\u003cli\u003eBasar-se en la "pèrdua de valor patrimonial" del municipi.\u003c/li\u003e
+\u003cli\u003eFer que sigui econòmicament inviable per a un fons d'inversió instal·lar-se.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+
+\u003cdiv class="action-item"\u003e
+\u003ch4\u003e🚜 3.3. Aliança amb el Sector Agrari (Agrivoltaica Real)\u003c/h4\u003e
+\u003cul\u003e
+\u003cli\u003eSi s'ha de posar alguna placa a terra (perquè no arribem amb les teulades), que sigui exclusivament
+\u003cstrong\u003eAgrivoltaica d'Hivernacle o Elevada\u003c/strong\u003e.\u003c/li\u003e
+\u003cli\u003eGestionada per pagesos locals, i dimensionada només per a la maquinària agrícola.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+
+\u003c!-- Implementation Roadmap --\u003e
+\u003cdiv class="axis-card"\u003e
+\u003ch2 style="text-align: center; margin-bottom: 2rem;"\u003e🗺️ Full de Ruta d'Implementació\u003c/h2\u003e
+\u003ctable class="roadmap-table"\u003e
+\u003cthead\u003e
+\u003ctr\u003e
+\u003cth\u003eFase\u003c/th\u003e
+\u003cth\u003eAcció Principal\u003c/th\u003e
+\u003cth\u003eActors Clau\u003c/th\u003e
+\u003cth\u003eObjectiu\u003c/th\u003e
+\u003c/tr\u003e
+\u003c/thead\u003e
+\u003ctbody\u003e
+\u003ctr\u003e
+\u003ctd\u003e\u003cstrong\u003eImmediata\u003c/strong\u003e\u003c/td\u003e
+\u003ctd\u003e\u003cstrong\u003eMoratòria de llicències\u003c/strong\u003e + Inici Modificació POUM. Creació de la
+Comunitat Energètica (CEL).\u003c/td\u003e
+\u003ctd\u003eAjuntament + Juristes\u003c/td\u003e
+\u003ctd\u003eAturar el rellotge i ocupar la xarxa elèctrica.\u003c/td\u003e
+\u003c/tr\u003e
+\u003ctr\u003e
+\u003ctd\u003e\u003cstrong\u003eCurt Termini\u003c/strong\u003e\u003c/td\u003e
+\u003ctd\u003e\u003cstrong\u003eAuditoria de Teulades\u003c/strong\u003e. Cens de naus agrícoles i teulades domèstiques
+aptes.\u003c/td\u003e
+\u003ctd\u003eEnginyers + Veïns\u003c/td\u003e
+\u003ctd\u003eDemostrar capacitat d'autosuficiència sense tocar el sòl.\u003c/td\u003e
+\u003c/tr\u003e
+\u003ctr\u003e
+\u003ctd\u003e\u003cstrong\u003eMig Termini\u003c/strong\u003e\u003cbr\u003e(2026-2030)\u003c/td\u003e
+\u003ctd\u003eInstal·lació progressiva de plaques en teulades segons demanda real. \u003cstrong\u003eCertificació de
+Paisatge Protegit\u003c/strong\u003e.\u003c/td\u003e
+\u003ctd\u003eSocietat Civil + Ecòlegs\u003c/td\u003e
+\u003ctd\u003eBlindatge legal i físic del territori.\u003c/td\u003e
+\u003c/tr\u003e
+\u003c/tbody\u003e
+\u003c/table\u003e
+\u003c/div\u003e
+
+\u003c!-- Brilliant Touch --\u003e
+\u003cdiv class="highlight-box" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border-left-color:
+var(--accent);"\u003e
+\u003ch3\u003e💎 El Toc Brillant: Clàusula de Reversibilitat 2050\u003c/h3\u003e
+\u003cp\u003eIntroduir en la normativa local la \u003cstrong\u003e"Clàusula de Tecnologia
+Transitòria"\u003c/strong\u003e:\u003c/p\u003e
+\u003cblockquote style="border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 1.5rem 0; font-style:
+italic; color: #555;"\u003e
+"Qualsevol instal·lació renovable en sòl no urbanitzable ha de tenir una vida útil màxima de 20 anys, amb obligació de
+desmantellament garantit mitjançant fiança bancària, sota la premissa que pel 2050 la tecnologia (hidrogen, fusió,
+bateries d'alta densitat) farà innecessària l'ocupació extensiva del territori."
+\u003c/blockquote\u003e
+\u003cp\u003e\u003cstrong\u003eImpacte:\u003c/strong\u003e Això espanta els inversors especulatius que busquen drets
+indefinits sobre la terra, però encaixa perfectament amb la voluntat de cobrir necessitats actuals sense hipotecar el
+futur.\u003c/p\u003e
+\u003c/div\u003e
+
+\u003c!-- Back to Home --\u003e
+\u003cdiv style="text-align: center; margin: 4rem 0;"\u003e
+\u003ca href="../index.html" class="btn primary"\u003e
+\u003ci data-lucide="home"\u003e\u003c/i\u003e Tornar a la Pàgina Principal
+\u003c/a\u003e
+\u003c/div\u003e
+\u003c/section\u003e
+
+\u003cscript src="../script.js"\u003e\u003c/script\u003e
+\u003cscript\u003elucide.createIcons();\u003c/script\u003e
+\u003c/body\u003e
+
+\u003c/html\u003e

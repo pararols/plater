@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificació Puntual del POUM | Sant Jordi Desvalls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background: var(--bg);
+        }
+
+        .doc-hero {
+            min-height: 50vh;
+            background: linear-gradient(135deg, #1a3c17 0%, #2d5a27 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .doc-hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .doc-hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .content-section {
+            padding: 4rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .legal-article {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        .article-header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .article-section {
+            margin-bottom: 2rem;
+        }
+
+        .article-section h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .article-section p {
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .legal-quote {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #555;
+            border-radius: 5px;
+        }
+
+        .expert-opinion {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .expert-opinion h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--accent);
+        }
+
+        .warning-box h3 {
+            color: #e65100;
+            margin-bottom: 1rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid var(--primary);
+        }
+
+        .impact-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .impact-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: white;
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        .numbered-list {
+            counter-reset: item;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .numbered-list li {
+            counter-increment: item;
+            margin-bottom: 1.5rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .numbered-list li::before {
+            content: counter(item);
+            background: var(--primary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 800;
+        }
+
+        @media print {
+            .back-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="../index.html" class="back-btn">
+        <i data-lucide="arrow-left"></i> Tornar
+    </a>
+
+    <!-- Hero Section -->
+    <section class="doc-hero">
+        <div class="doc-hero-content">
+            <span class="badge">Document Tècnic-Jurídic</span>
+            <h1>Modificació Puntual del POUM</h1>
+            <p class="subtitle">Clàusula de Tecnologia Transitòria</p>
+            <p>Proposta de regulació temporal i reversible per a instal·lacions renovables en sòl no urbanitzable</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <!-- Dictamen Tècnic -->
+        <div class="expert-opinion">
+            <h3><i data-lucide="shield-check"></i> Dictamen de Viabilitat</h3>
+            <p><strong>Veredicte General:</strong> La proposta és <strong>VIABLE</strong>, però <strong>EXTREMADAMENT
+                    AGOSARADA</strong>.</p>
+            <p>No es pot redactar com un "desig de futur" (la llei no entén de ciència-ficció), sinó que s'ha de
+                fonamentar en conceptes jurídics existents: <strong>la temporalitat de l'ús excepcional en sòl
+                    rústic</strong> i la <strong>garantia de restitució</strong>.</p>
+        </div>
+
+        <!-- Fonament Legal -->
+        <div class="legal-article">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-dark);">📋 Fonament Legal</h2>
+
+            <div class="article-section">
+                <h4>1. L'Eina Legal: "Usos Provisionals" i "Llicència Temporal"</h4>
+                <p>En Dret Urbanístic (Llei d'Urbanisme de Catalunya), el Sòl No Urbanitzable (SNU) té com a destinació
+                    natural l'agrícola/forestal. L'ús industrial (fotovoltaica) és una <strong>excepció</strong>.</p>
+
+                <ul class="numbered-list">
+                    <li>
+                        <strong>L'Argument:</strong> Com que és una excepció, l'Ajuntament pot lligar la llicència a la
+                        <strong>vida útil de la tecnologia instal·lada</strong>.
+                    </li>
+                    <li>
+                        <strong>La Trampa:</strong> Normalment, les llicències no caduquen mentre hi hagi activitat.
+                    </li>
+                    <li>
+                        <strong>La Solució (El "Hack" Jurídic):</strong> No prohibim que segueixin funcionant, sinó que
+                        <strong>prohibim la renovació automàtica o el "repowering"</strong> (canviar plaques velles per
+                        noves) sense una nova llicència completa.
+                    </li>
+                </ul>
+
+                <div class="legal-quote">
+                    <strong>Redacció proposada:</strong><br>
+                    "La llicència d'ús i obres s'atorga exclusivament per a la vida útil dels equips instal·lats
+                    inicialment, estimada en un màxim de 25 anys. Qualsevol substitució d'elements de generació
+                    requerirà una nova tramitació subjecta a la normativa i tecnologies disponibles en aquell moment
+                    futur."
+                </div>
+            </div>
+
+            <div class="article-section">
+                <h4>2. La Fiança de Desmantellament (El Cop Econòmic)</h4>
+                <p>El Decret Llei 16/2019 de la Generalitat ja obliga a presentar un pla de restauració i una fiança.
+                    Però molts ajuntaments accepten fiances baixes.</p>
+
+                <p><strong>L'Estratègia de Sant Jordi:</strong></p>
+                <ul>
+                    <li>Exigir que la fiança inclogui no només el desmuntatge, sinó el <strong>tractament de
+                            residus</strong> (reciclatge de panells, que és caríssim) i la
+                        <strong>reforestació/recuperació agronòmica</strong> del sòl durant 5 anys posteriors.</li>
+                    <li><strong>Actualització de l'IPC:</strong> La fiança s'ha de recalcular cada 5 anys. Això
+                        destrossa el "Business Plan" dels fons d'inversió, perquè els obliga a tenir molts diners
+                        immobilitzats.</li>
+                </ul>
+            </div>
+
+            <div class="article-section">
+                <h4>3. La Premissa del 2050 (Justificació Tècnica)</h4>
+                <p>No podem posar "fusió nuclear" en una norma local perquè un jutge diria que és especulatiu. Però sí
+                    que podem utilitzar el <strong>"Principi de Precaució"</strong> i el <strong>PAESC</strong>.</p>
+
+                <div class="legal-quote">
+                    <strong>Argumentació:</strong><br>
+                    "Atesa la ràpida evolució tecnològica i els objectius de descarbonització del transport pel 2050, es
+                    considera que l'ocupació extensiva de sòl agrícola és una <strong>mesura transitòria
+                        d'emergència</strong> i no una transformació urbanística permanent."
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Normatiu -->
+        <div class="legal-article">
+            <div class="article-header">
+                ARTICLE X: RÈGIM TRANSITORI DE LES INSTAL·LACIONS DE GENERACIÓ EN SÒL NO URBANITZABLE
+            </div>
+
+            <div class="article-section">
+                <h4>1. Caràcter Provisional i Reversible</h4>
+                <p>Totes les instal·lacions de generació d'energia renovable en Sòl No Urbanitzable s'entenen com a usos
+                    excepcionals i transitoris lligats a l'emergència climàtica actual. No generen drets urbanístics
+                    consolidats de caràcter indefinit sobre el terreny.</p>
+            </div>
+
+            <div class="article-section">
+                <h4>2. Temporalitat de la Llicència</h4>
+                <p>Les llicències municipals s'atorgaran per un període màxim improrrogable de <strong>25 anys</strong>
+                    (coincident amb la vida útil estàndard i garantia tecnològica dels panells).</p>
+            </div>
+
+            <div class="article-section">
+                <h4>3. Prohibició de Repotenciació (Repowering) Automàtica</h4>
+                <p>Finalitzat aquest termini, o quan el rendiment de la instal·lació baixi del 70%, la llicència
+                    s'extingirà. La instal·lació de nova tecnologia sobre el mateix terreny requerirà una nova llicència
+                    sotmesa a la normativa vigent en aquell moment, havent de justificar novament la seva necessitat i
+                    la inexistència d'alternatives tecnològiques de menor impacte territorial (ex. fusió, hidrogen,
+                    generació urbana).</p>
+            </div>
+
+            <div class="article-section">
+                <h4>4. Garantia de Restitució Total</h4>
+                <p>Previ a l'inici d'obres, el promotor dipositarà una fiança bancària suficient per cobrir el 100% del
+                    cost de desmantellament, gestió de residus especials i un pla de seguiment de la recuperació de la
+                    capa vegetal fèrtil durant 3 anys posteriors al tancament.</p>
+            </div>
+        </div>
+
+        <!-- Impacte Financer -->
+        <div class="warning-box">
+            <h3>💰 Per què això espanta els especuladors?</h3>
+            <p><strong>Anàlisi Financera:</strong></p>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h4>Valor Residual Zero</h4>
+                    <p>Els fons d'inversió calculen el valor dels seus actius a 30-40 anys. Si l'any 25 la llicència mor
+                        i han de tornar a demanar permís (amb risc de denegació), el valor residual del projecte és 0 €.
+                        Això fa que el projecte sigui "no finançable".</p>
+                </div>
+
+                <div class="impact-card">
+                    <h4>Cost d'Oportunitat</h4>
+                    <p>Si el 2045 la tecnologia d'hidrogen és més barata i compacta, l'Ajuntament podrà denegar la nova
+                        llicència solar dient: "Ja no cal ocupar 50 hectàrees, ara amb una planta d'hidrogen de 1.000m²
+                        en tenim prou".</p>
+                </div>
+
+                <div class="impact-card">
+                    <h4>Fiança Actualitzable</h4>
+                    <p>L'obligació de recalcular la fiança cada 5 anys segons l'IPC i els costos reals de reciclatge
+                        obliga a immobilitzar capital que els inversors prefereixen destinar a altres projectes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusió -->
+        <div class="expert-opinion">
+            <h3><i data-lucide="lightbulb"></i> Conclusió Estratègica</h3>
+            <p>La clàusula és <strong>genial</strong>. És un mecanisme de defensa "passiu-agressiu".</p>
+            <p><strong>No dius "NO". Dius "SÍ, PERÒ NOMÉS MENTRE SIGUI IMPRESCINDIBLE".</strong></p>
+            <p>Això posa la càrrega de la prova en el futur: si el 2050 encara necessitem plaques solars massives, es
+                podran tornar a demanar. Però si la tecnologia ha millorat (com preveiem), Sant Jordi recuperarà els
+                seus camps sense cost.</p>
+        </div>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="../index.html" class="btn primary">
+                <i data-lucide="home"></i> Tornar a la Pàgina Principal
+            </a>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
