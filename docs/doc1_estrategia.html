@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ca">
 
 <head>
@@ -214,6 +214,26 @@
             font-weight: 600;
             display: inline-block;
             margin: 0.2rem;
+        }
+
+        
+        @media (max-width: 768px) {
+            .doc-hero { min-height: 50vh; padding: 4rem 5%; }
+            .doc-hero h1 { font-size: 2.5rem; }
+            .doc-hero .subtitle { font-size: 1.2rem; }
+            .doc-hero p { font-size: 1rem; }
+            .content-section { padding: 2rem 5%; }
+            .axis-card { padding: 2rem; }
+            .axis-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .axis-number { width: 50px; height: 50px; font-size: 1.5rem; }
+            .axis-title { font-size: 1.5rem; }
+            .grid-3 { grid-template-columns: 1fr; }
+            .roadmap-table { font-size: 0.9rem; }
+            .roadmap-table th, .roadmap-table td { padding: 0.8rem; }
+            .formula { font-size: 0.95rem; padding: 1rem; }
+            .back-btn { position: static; margin: 1rem; width: calc(100% - 2rem); justify-content: center; }
+            .highlight-box { padding: 1.5rem; }
+            .action-item { padding: 1rem; }
         }
 
         @media print {
