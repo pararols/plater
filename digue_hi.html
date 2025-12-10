@@ -298,47 +298,61 @@
                 </div>
 
                 <div class="form-container">
-                    <div class="form-group">
-                        <label for="name">Nom (opcional)</label>
-                        <input type="text" id="name" name="name" placeholder="Anònim">
-                        <small>Pots deixar-ho en blanc si prefereixes ser anònim</small>
+                    <h2>Envia la teva aportació</h2>
+                    <div id="success-message" class="success-message">
+                        ✓ Gràcies! La teva aportació s'ha enviat correctament i serà revisada aviat.
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="el-teu-email@exemple.cat">
-                        <small>No es publicarà, només per contactar-te si cal</small>
-                    </div>
+                    <form name="feedback" method="POST" action="/gracies.html" data-netlify="true"
+                        data-netlify-honeypot="bot-field">
+                        <!-- Honeypot field for bot protection -->
+                        <p style="display: none;">
+                            <label>No omplir si ets humà: <input name="bot-field" /></label>
+                        </p>
+                        <input type="hidden" name="form-name" value="feedback" />
 
-                    <div class="form-group">
-                        <label for="type">Tipus d'aportació *</label>
-                        <select id="type" name="type" required>
-                            <option value="">Selecciona una opció</option>
-                            <option value="Proposta">💡 Proposta</option>
-                            <option value="Idea">🌟 Idea</option>
-                            <option value="Pregunta">❓ Pregunta</option>
-                            <option value="Comentari">💬 Comentari</option>
-                            <option value="Preocupació">⚠️ Preocupació</option>
-                        </select>
-                    </div>
+                        <div class="form-group">
+                            <label for="name">Nom (opcional)</label>
+                            <input type="text" id="name" name="name" placeholder="Anònim">
+                            <small>Pots deixar-ho en blanc si prefereixes ser anònim</small>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="title">Títol *</label>
-                        <input type="text" id="title" name="title" required
-                            placeholder="Resum breu de la teva aportació" maxlength="100">
-                    </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="el-teu-email@exemple.cat">
+                            <small>No es publicarà, només per contactar-te si cal</small>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">Missatge *</label>
-                        <textarea id="message" name="message" required
-                            placeholder="Explica'ns la teva proposta, idea o comentari..." maxlength="1000"></textarea>
-                        <small id="char-count">0 / 1000 caràcters</small>
-                    </div>
+                        <div class="form-group">
+                            <label for="type">Tipus d'aportació *</label>
+                            <select id="type" name="type" required>
+                                <option value="">Selecciona una opció</option>
+                                <option value="Proposta">💡 Proposta</option>
+                                <option value="Idea">🌟 Idea</option>
+                                <option value="Pregunta">❓ Pregunta</option>
+                                <option value="Comentari">💬 Comentari</option>
+                                <option value="Preocupació">⚠️ Preocupació</option>
+                            </select>
+                        </div>
 
-                    <button type="submit" class="submit-btn">
-                        <i data-lucide="send"></i>
-                        Enviar aportació
-                    </button>
+                        <div class="form-group">
+                            <label for="title">Títol *</label>
+                            <input type="text" id="title" name="title" required
+                                placeholder="Resum breu de la teva aportació" maxlength="100">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Missatge *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Explica'ns la teva proposta, idea o comentari..."
+                                maxlength="1000"></textarea>
+                            <small id="char-count">0 / 1000 caràcters</small>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i data-lucide="send"></i>
+                            Enviar aportació
+                        </button>
                     </form>
                 </div>
             </div>
