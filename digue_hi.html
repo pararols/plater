@@ -303,12 +303,12 @@
                         ✓ Gràcies! La teva aportació s'ha enviat correctament i serà revisada aviat.
                     </div>
 
-                    <form name="feedback-v3" id="feedback-form" method="POST" netlify netlify-honeypot="bot-field">
+                    <form name="feedback-v5" method="POST" action="/thankyou.html" netlify netlify-honeypot="bot-field">
                         <!-- Honeypot field for bot protection -->
                         <p style="display: none;">
                             <label>No omplir si ets humà: <input name="bot-field" /></label>
                         </p>
-                        <input type="hidden" name="form-name" value="feedback-v3" />
+                        <input type="hidden" name="form-name" value="feedback-v5" />
 
                         <div class="form-group">
                             <label for="name">Nom (opcional)</label>
@@ -353,31 +353,6 @@
                             Enviar aportació
                         </button>
                     </form>
-                    <script>
-                        document.getElementById('feedback-form').addEventListener('submit', async (e) => {
-                            e.preventDefault();
-
-                            const form = e.target;
-                            const formData = new FormData(form);
-
-                            try {
-                                const response = await fetch('/', {
-                                    method: 'POST',
-                                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                                    body: new URLSearchParams(formData).toString()
-                                });
-
-                                if (response.ok) {
-                                    window.location.href = "/thankyou.html";
-                                } else {
-                                    alert("Hi ha hagut un error en enviar el formulari. Si us plau, torna-ho a provar.");
-                                }
-                            } catch (error) {
-                                console.error('Error:', error);
-                                alert("Error de connexió.");
-                            }
-                        });
-                    </script>
                 </div>
             </div>
 
@@ -432,7 +407,7 @@
     <script>
         lucide.createIcons();
 
-        // Check if form was successfully submitted (using hash)
+        // Check if form was successfully submitted (using hash) - Legacy method kept for safety
         const successMessage = document.getElementById('success-message');
 
         if (window.location.hash === '#success') {
